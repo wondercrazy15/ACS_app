@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True"
+    xmlns:local="clr-namespace:ACS_App.Helper"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False"
+    x:Class="ACS_App.Views.LoginView">
+    <StackLayout Orientation="Vertical" VerticalOptions="Fill" HorizontalOptions="Fill" Margin="20,20,20,20">
+        <Label Text="Welcome!"
+               TextColor="Black"
+               FontAttributes="Bold"
+               FontSize="30"
+               HorizontalOptions="StartAndExpand"/>
+
+         <Label Text="SIGN IN OR CONTINUE AS A GUEST"
+               TextColor="Black"
+               FontAttributes="Bold"
+               Margin="0,15,0,0"
+               FontSize="18"
+               HorizontalOptions="StartAndExpand"/>
+        <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent">
+            <local:CustomEntry BackgroundColor="#F4F4F4"
+                               Placeholder="Email Address"
+                               HeightRequest="40"
+                               PlaceholderColor="#868686"
+                               TextColor="Black"
+                               FontSize="Small"/>
+        <StackLayout>
+            <Frame
+                HeightRequest="40"
+                HasShadow="False"
+                BorderColor="#F4F4F4"
+                BackgroundColor="#F4F4F4"
+                Margin="0,10,0,0"
+                Padding="10,0,10,0"
+                CornerRadius="02">
+                <Grid RowSpacing="0" Padding="0" Margin="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+                    <local:PasswordCustomRendererEntry  BackgroundColor="#F4F4F4"
+                                                        Placeholder="Password"
+                                                        PlaceholderColor="#868686"
+                                                        Margin="0"
+                                                        TextColor="Black"
+                                                        FontSize="Small"/>
+                    <ImageButton x:Name="btn_icon_password"
+                                 Clicked="btn_icon_password_Clicked"
+                                 BackgroundColor="Transparent"
+                                 Source="close_password_eye"
+                                 Grid.Column="1"
+                                 HorizontalOptions="End"
+                                 HeightRequest="40"
+                                 WidthRequest="20"/>
+                </Grid>
+            </Frame>
+        </StackLayout>
+            <StackLayout Orientation="Vertical" Margin="0,10,0,0">
+                    <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="40" Margin="0,5,0,5">
+                        <Frame HasShadow="False" CornerRadius="0" BackgroundColor="#722BAD" Padding="10">
+                            <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
+                                <Label Text="LOGIN"
+                                    TextColor="White"
+                                    MaxLines="1"
+                                    HorizontalOptions="Center"
+                                    FontSize="17"
+                                    FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
+                </StackLayout>
+            <StackLayout Orientation="Vertical" Margin="0,0,0,0">
+                    <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="40" Margin="0,5,0,5">
+                        <Frame HasShadow="False" CornerRadius="0" BackgroundColor="White" Padding="10">
+                            <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
+                                <Label Text="SIGN UP"
+                                    TextColor="#722BAD"
+                                    MaxLines="1"
+                                    HorizontalOptions="Center"
+                                    FontSize="17"
+                                    FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
+                </StackLayout>
+            <Label Text="Forgot password?"
+               TextColor="#722BAD"
+               FontAttributes="None"
+               FontSize="15"
+               HorizontalOptions="Center"/>
+        </StackLayout>
+        <Label Text="Continue as Guest"
+                TextColor="#722BAD"
+                FontAttributes="None"
+                FontSize="15"
+                Margin="0,15,0,0"
+                HorizontalOptions="Center"
+                BackgroundColor="Transparent">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+            </Label.GestureRecognizers>
+
+        </Label>
+    </StackLayout>
+</ContentPage>
+

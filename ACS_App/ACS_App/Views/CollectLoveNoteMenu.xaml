@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ACS_App.Views.CollectLoveNoteMenu"
+    xmlns:local="clr-namespace:ACS_App.Helper"
+    NavigationPage.HasNavigationBar="False">
+     <StackLayout x:Name="BgStack" BackgroundColor="#722BAD"  Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <StackLayout  BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="bgStackBottom" BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <!--App Bar Design -->
+                <StackLayout Orientation="Horizontal" BackgroundColor="#722BAD" HeightRequest="60" HorizontalOptions="FillAndExpand">
+                    <ImageButton Clicked="backArrow" BackgroundColor="Transparent" Source="arrow_left" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                    <Label Text="MAKE A LOVE NOTE"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent"
+                            TextColor="White"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            VerticalTextAlignment="Center"/>
+                    <Image Source="" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Margin="20">
+                    <Label Text="Note ID"
+                           TextColor="Black"
+                           FontSize="Small"
+                           FontAttributes="Bold"/>
+                    <local:CustomEntry BackgroundColor="#F4F4F4"
+                                       Placeholder="Enter your note ID"
+                                       TextColor="Black"
+                                       PlaceholderColor="#868686"
+                                       FontSize="Small"
+                                       HeightRequest="40"/>
+                    <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="40" Margin="0,10,0,0">
+                        <Frame HasShadow="False" CornerRadius="0" BackgroundColor="White" Padding="12">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="Transparent" VerticalOptions="Center">
+                                <Image Source="qr_code_scanner"/>
+                                <Label Text="SCAN QR CODE"
+                                    TextColor="#722BAD"
+                                    MaxLines="1"
+                                    HorizontalOptions="Center"
+                                    FontSize="17"
+                                    FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" Margin="10,0,10,5">
+                    <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="40" Margin="0,5,0,10">
+                        <Frame HasShadow="False" CornerRadius="0" BackgroundColor="#722BAD" Padding="10">
+                            <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
+                                <Label Text="SUBMIT"
+                                    TextColor="White"
+                                    MaxLines="1"
+                                    HorizontalOptions="Center"
+                                    FontSize="17"
+                                    FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="#722BAD" HeightRequest="2" Margin="0,0,0,10"/>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

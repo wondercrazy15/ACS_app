@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ACS_App.Views.SigninPopupView"
+    xmlns:local="clr-namespace:ACS_App.Helper"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"  
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"  
+    BackgroundColor="#6A6A6A6B">
+    <pages:PopupPage.Animation>  
+        <animations:ScaleAnimation   
+                      PositionIn="Center"  
+                      PositionOut="Center"  
+                      ScaleIn="1.2"  
+                      ScaleOut="0.8"  
+                      DurationIn="400"  
+                      DurationOut="300"  
+                      EasingIn="SinOut"  
+                      EasingOut="SinIn"  
+      HasBackgroundAnimation="False"/>  
+    </pages:PopupPage.Animation>  
+    <StackLayout VerticalOptions="CenterAndExpand"  Padding="40,80,40,0" HorizontalOptions="FillAndExpand" >      
+        <Frame CornerRadius="0" Margin="0" Padding="0" BorderColor="White" HasShadow="False" BackgroundColor="White" >  
+            <StackLayout Padding="0" Margin="0">
+                <StackLayout HorizontalOptions="CenterAndExpand" Margin="0,46,0,0">
+                    <Label Text="SIGN IN TO CONTINUE"
+                       TextColor="Black"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"/>
+                <Label Margin="0,40,0,0"
+                       Text="SIGN IN WITH"
+                       TextColor="#373737"
+                       FontSize="15"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,23,0,0">
+                    <Frame HasShadow="False" WidthRequest="40" HeightRequest="40" CornerRadius="0" BackgroundColor="#F4F4F4" Padding="0">
+                        <Image Margin="6"  Source="fb" ></Image>
+                    </Frame>
+                    <Frame HasShadow="False" WidthRequest="40" HeightRequest="40" CornerRadius="0" BackgroundColor="#F4F4F4" Padding="0">
+                        <Image Margin="6"  Source="apple" ></Image>
+                    </Frame>
+                    <Frame HasShadow="False" WidthRequest="40" HeightRequest="40" CornerRadius="0" BackgroundColor="#F4F4F4" Padding="0">
+                        <Image Margin="6"  Source="google" ></Image>
+                    </Frame>                                           
+                </StackLayout>
+                <Label Margin="0,16,0,0"
+                       Text="OR SIGN IN WITH EMAIL"
+                       TextColor="#373737"
+                       FontSize="15"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <StackLayout Margin="11,16,11,11">
+                    <local:CustomEntry BackgroundColor="#F4F4F4"
+                                   Placeholder="Email Address"
+                                   HeightRequest="40"
+                                   PlaceholderColor="#868686"
+                                   TextColor="Black"
+                                   FontSize="Small"/>
+                    <StackLayout>
+                        <Frame
+                            HeightRequest="40"
+                            HasShadow="False"
+                            BorderColor="#F4F4F4"
+                            BackgroundColor="#F4F4F4"
+                            Margin="0,10,0,0"
+                            Padding="10,0,10,0"
+                            CornerRadius="02">
+                            <Grid RowSpacing="0" Padding="0" Margin="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <local:PasswordCustomRendererEntry  BackgroundColor="#F4F4F4"
+                                                                    Placeholder="Password"
+                                                                    PlaceholderColor="#868686"
+                                                                    Margin="0"
+                                                                    TextColor="Black"
+                                                                    FontSize="Small"/>
+                                <ImageButton x:Name="btn_icon_password"
+                                             Clicked="btn_icon_password_Clicked"
+                                             BackgroundColor="Transparent"
+                                             Source="close_password_eye"
+                                             Grid.Column="1"
+                                             HorizontalOptions="End"
+                                             HeightRequest="40"
+                                             WidthRequest="20"/>
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical" Margin="0,10,0,0">
+                                <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="40" Margin="0,5,0,5">
+                                    <Frame HasShadow="False" CornerRadius="0" BackgroundColor="#722BAD" Padding="10">
+                                        <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
+                                            <Label Text="LOGIN"
+                                                TextColor="White"
+                                                MaxLines="1"
+                                                HorizontalOptions="Center"
+                                                FontSize="17"
+                                                FontAttributes="Bold"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </Frame>
+                     </StackLayout>                    
+                    <Label Text="Forgot password?"
+                           TextColor="#722BAD"
+                           FontAttributes="None"
+                           FontSize="15"
+                           HorizontalOptions="Center"/>
+                </StackLayout>       
+                <Label Margin="11,61,0,0" Text="New Member?" FontSize="15" TextColor="#7C7C7C"/>
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" Margin="11,0,10,31" >
+                     <Label Text="Register here"
+                           TextColor="#722BAD"
+                           FontAttributes="None"
+                           FontSize="15"
+                           VerticalOptions="Center"
+                           HorizontalOptions="StartAndExpand"/>
+                    <Label Text="Need Help?"
+                           TextColor="#722BAD"
+                           FontAttributes="None"
+                           VerticalOptions="Center"
+                           FontSize="15"
+                           HorizontalOptions="End"/>
+                    <Frame  VerticalOptions="Center" HasShadow="False" WidthRequest="32" HeightRequest="32" CornerRadius="50" BackgroundColor="#ECECEC" Margin="0" Padding="0">
+                        <Image Margin="6"  Source="call" ></Image>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>  
+        </Frame>  
+    </StackLayout>
+</pages:PopupPage>
+

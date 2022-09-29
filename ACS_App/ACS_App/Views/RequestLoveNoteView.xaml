@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False"
+    xmlns:local="clr-namespace:ACS_App.Helper"
+    x:Class="ACS_App.Views.RequestLoveNoteView">
+    <StackLayout x:Name="BgStack" BackgroundColor="#722BAD"  Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <StackLayout  BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="bgStackBottom" BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <!--App Bar Design -->
+                <StackLayout Orientation="Horizontal" BackgroundColor="#722BAD" HeightRequest="60" HorizontalOptions="FillAndExpand">
+                    <ImageButton Clicked="backArrow" BackgroundColor="Transparent" Source="arrow_left" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                    <Label Text="Request a love note"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent"
+                            TextColor="White"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            VerticalTextAlignment="Center"/>
+                    <Image Source="" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                </StackLayout>
+                <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+                     <StackLayout Margin="10,5,10,5">
+                        <Label Text="RECIPIENT DETAILS"
+                               TextColor="Black"
+                               FontSize="15"
+                               Margin="0,0,0,10"
+                               FontAttributes="Bold"/>
+                        <!--Recipient first name-->
+                        <Label Text="Recipient first name"
+                               TextColor="#373737"
+                               FontSize="13"
+                                Margin="0,0,0,5"
+                               FontAttributes="None"/>
+                        <local:CustomEntry BackgroundColor="#F4F4F4"
+                                           Placeholder="First name"
+                                           TextColor="Black"
+                                           HeightRequest="40"
+                                           PlaceholderColor="#868686"
+                                           Margin="0,0,0,5"
+                                           FontSize="Small"/>
+
+                        <!--Recipient Age group-->
+                        <Label Text="Recipient Age group"
+                               TextColor="#373737"
+                               FontSize="13"
+                               Margin="0,0,0,5"
+                               FontAttributes="None"/>
+                        <StackLayout Spacing="0">
+                            <Frame
+                                HeightRequest="40"
+                                HasShadow="False"
+                                BorderColor="#F4F4F4"
+                                BackgroundColor="#F4F4F4"
+                                Margin="0"
+                                Padding="10,0,10,0"
+                                CornerRadius="02">
+                                <Grid RowSpacing="0" Padding="0" Margin="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="50"/>
+                                    </Grid.ColumnDefinitions>
+                                    <local:PasswordCustomRendererEntry  x:Name="Cateforize_by_age_text"
+                                                                        BackgroundColor="#F4F4F4"
+                                                                        Placeholder="-Categorize by Age-"
+                                                                        PlaceholderColor="#868686"
+                                                                        Margin="0"
+                                                                        IsReadOnly="True"
+                                                                        TextColor="Black"
+                                                                        FontSize="Small"/>
+                                    <ImageButton x:Name="Cateforize_by_age_image"
+                                                 BackgroundColor="Transparent"
+                                                 Source="arrow_drop_down_circle"
+                                                 Grid.Column="1"
+                                                 HorizontalOptions="End"
+                                                 HeightRequest="40"
+                                                 Clicked="btn_icon_recipientAge_Clicked"
+                                                 WidthRequest="20"/>
+                                </Grid>
+                            </Frame>
+                              
+                            <Frame x:Name="Recipient_Age_group_frameView" BorderColor="#DADADA" Padding="10" HasShadow="False" Margin="0">
+                                <CollectionView x:Name="Recipient_Age_group_list"
+                                                Margin="0"
+                                                VerticalOptions="StartAndExpand"
+                                                SelectionMode="Single"
+                                                SelectionChanged="Recipient_Age_group_list_SelectionChanged">
+                                    <CollectionView.ItemTemplate>    
+                                        <DataTemplate>
+                                            <Label Text="{Binding .}"
+                                                   VerticalOptions="End"
+                                                   FontSize="15"
+                                                   MaxLines="2"
+                                                   TextColor="#5B5B5B" BackgroundColor="White"/>
+                                        </DataTemplate>    
+                                    </CollectionView.ItemTemplate>    
+                                </CollectionView>
+                            </Frame>
+                        </StackLayout>
+
+                        <!--Recipient Gender-->
+                        <Label Text="Recipient Gender"
+                               TextColor="#373737"
+                               FontSize="13"
+                               Margin="0,0,0,5"
+                               FontAttributes="None"/>
+                         <StackLayout Spacing="0">
+                            <Frame
+                                HeightRequest="40"
+                                HasShadow="False"
+                                BorderColor="#F4F4F4"
+                                BackgroundColor="#F4F4F4"
+                                Margin="0"
+                                Padding="10,0,10,0"
+                                CornerRadius="02">
+                                <Grid RowSpacing="0" Padding="0" Margin="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="50"/>
+                                    </Grid.ColumnDefinitions>
+                                    <local:PasswordCustomRendererEntry  x:Name="Cateforize_by_Gender_text"
+                                                                        BackgroundColor="#F4F4F4"
+                                                                        Placeholder="-Categorize by Gender-"
+                                                                        PlaceholderColor="#868686"
+                                                                        Margin="0"
+                                                                        IsReadOnly="True"
+                                                                        TextColor="Black"
+                                                                        FontSize="Small"/>
+                                    <ImageButton x:Name="Cateforize_by_Gender_image"
+                                                 BackgroundColor="Transparent"
+                                                 Source="arrow_drop_down_circle"
+                                                 Grid.Column="1"
+                                                 HorizontalOptions="End"
+                                                 HeightRequest="40"
+                                                 Clicked="btn_icon_Recipient_Gender_Clicked"
+                                                 WidthRequest="20"/>
+                                </Grid>
+                            </Frame>
+                              
+                            <Frame x:Name="Recipient_Gender_frameView" BorderColor="#DADADA" Padding="10" HasShadow="False" Margin="0">
+                                <CollectionView x:Name="Recipient_Gender_list"
+                                                Margin="0"
+                                                VerticalOptions="StartAndExpand"
+                                                SelectionMode="Single"
+                                                SelectionChanged="Recipient_Gender_group_list_SelectionChanged">
+                                    <CollectionView.ItemTemplate>    
+                                        <DataTemplate>
+                                            <Label Text="{Binding .}"
+                                                   VerticalOptions="End"
+                                                   FontSize="15"
+                                                   MaxLines="2"
+                                                   TextColor="#5B5B5B" BackgroundColor="White"/>
+                                        </DataTemplate>    
+                                    </CollectionView.ItemTemplate>    
+                                </CollectionView>
+                            </Frame>
+                        </StackLayout>
+
+                         <!--Recipients relationship to cancer-->
+                         <Label Text="Recipients relationship to cancer"
+                               TextColor="#373737"
+                               FontSize="13"
+                               Margin="0,0,0,5"
+                               FontAttributes="None"/>
+                         <local:CustomEntry BackgroundColor="#F4F4F4"
+                                           Placeholder="Enter relationship with cancer"
+                                           TextColor="Black"
+                                           HeightRequest="40"
+                                           PlaceholderColor="#868686"
+                                           Margin="0,0,0,5"
+                                           FontSize="Small"/>
+                        <!--Form of delivery-->
+                        <Label Text="Form of delivery"
+                            TextColor="#373737"
+                            FontSize="13"
+                            Margin="0,0,0,5"
+                            FontAttributes="None"/>
+                        <StackLayout Spacing="0">
+                            <Frame
+                                HeightRequest="40"
+                                HasShadow="False"
+                                BorderColor="#F4F4F4"
+                                BackgroundColor="#F4F4F4"
+                                Margin="0"
+                                Padding="10,0,10,0"
+                                CornerRadius="02">
+                                <Grid RowSpacing="0" Padding="0" Margin="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="50"/>
+                                    </Grid.ColumnDefinitions>
+                                    <local:PasswordCustomRendererEntry  x:Name="form_of_delivery_text"
+                                                                        BackgroundColor="#F4F4F4"
+                                                                        Placeholder="-Choose the form of delivery-"
+                                                                        PlaceholderColor="#868686"
+                                                                        Margin="0"
+                                                                        IsReadOnly="True"
+                                                                        TextColor="Black"
+                                                                        FontSize="Small"/>
+                                    <ImageButton x:Name="form_of_delivery_image"
+                                                 BackgroundColor="Transparent"
+                                                 Source="arrow_drop_down_circle"
+                                                 Grid.Column="1"
+                                                 HorizontalOptions="End"
+                                                 HeightRequest="40"
+                                                 Clicked="btn_icon_form_of_delivery_Clicked"
+                                                 WidthRequest="20"/>
+                                </Grid>
+                            </Frame>
+                              
+                            <Frame x:Name="form_of_delivery_frameView" BorderColor="#DADADA" Padding="10" HasShadow="False" Margin="0">
+                                <CollectionView x:Name="form_of_delivery_frameView_list"
+                                                Margin="0"
+                                                VerticalOptions="StartAndExpand"
+                                                SelectionMode="Single"
+                                                SelectionChanged="form_of_delivery_group_list_SelectionChanged">
+                                    <CollectionView.ItemTemplate>    
+                                        <DataTemplate>
+                                            <Label Text="{Binding .}"
+                                                    VerticalOptions="End"
+                                                    FontSize="15"
+                                                    MaxLines="2"
+                                                    TextColor="#5B5B5B" BackgroundColor="White"/>
+                                        </DataTemplate>    
+                                    </CollectionView.ItemTemplate>    
+                                </CollectionView>
+                            </Frame>
+                        </StackLayout>
+
+                        <Label Text="Email where to send"
+                               TextColor="#373737"
+                               FontSize="13"
+                               Margin="0,10,0,5"
+                               FontAttributes="None"/>
+                         <local:CustomEntry BackgroundColor="#F4F4F4"
+                                           Placeholder="Enter recipients email"
+                                           TextColor="Black"
+                                           HeightRequest="40"
+                                           PlaceholderColor="#868686"
+                                           Margin="0,0,0,5"
+                                           FontSize="Small"/>
+
+                         <Label Text="Mobile Phone number  for Whatspp or Text"
+                                TextColor="#373737"
+                                FontSize="13"
+                                Margin="0,10,0,5"
+                                FontAttributes="None"/>
+                         <local:CustomEntry BackgroundColor="#F4F4F4"
+                                            Placeholder="Enter recipients phone number"
+                                            TextColor="Black"
+                                            HeightRequest="40"
+                                            PlaceholderColor="#868686"
+                                            Margin="0,0,0,5"
+                                            FontSize="Small"/>
+                        <StackLayout Orientation="Vertical" Margin="0,30,0,5">
+                            <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="40" Margin="0,5,0,10">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
+                                </Frame.GestureRecognizers>
+                                <Frame HasShadow="False" CornerRadius="0" BackgroundColor="#722BAD" Padding="10">
+                                    <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
+                                        <Label Text="SUBMIT"
+                                            TextColor="White"
+                                            MaxLines="1"
+                                            HorizontalOptions="Center"
+                                            FontSize="17"
+                                            FontAttributes="Bold"/>
+                                    </StackLayout>
+                                </Frame>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

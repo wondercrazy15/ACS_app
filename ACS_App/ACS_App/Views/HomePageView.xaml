@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ACS_App.Views.HomePageView">
+    <StackLayout x:Name="BgStack" BackgroundColor="#722BAD" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout BackgroundColor="White" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <!--App Bar Design -->
+        <StackLayout Orientation="Horizontal" BackgroundColor="#722BAD" HeightRequest="60" HorizontalOptions="FillAndExpand">
+            <Label Text="Love Notes"
+                   HorizontalOptions="CenterAndExpand"
+                   BackgroundColor="Transparent"
+                   TextColor="White"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   VerticalTextAlignment="Center"/>
+        </StackLayout>
+        <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="White">
+            <StackLayout Orientation="Vertical" Margin="10" Spacing="15">
+                <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="100">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
+                    </Frame.GestureRecognizers>
+                    <Frame HasShadow="False" CornerRadius="0" BackgroundColor="White" Padding="12">
+                       <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="MAKE A LOVE NOTE"
+                                        HorizontalOptions="FillAndExpand"
+                                        FontAttributes="Bold"
+                                        FontSize="17"
+                                        VerticalOptions="Center"
+                                        TextColor="#722BAD"/>
+                                <Image Source="icon_right_arrow" HeightRequest="30" WidthRequest="30"/>
+                            </StackLayout>
+                            <Label Text="Select a love note template and enter a message, film a video greeting or design your own card."
+                                   TextColor="Gray"
+                                   FontSize="13"
+                                   />
+                        </StackLayout>
+                    </Frame>
+                </Frame>
+
+                <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="100">
+                    <Frame.GestureRecognizers>  
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Reqest_Love_Note" NumberOfTapsRequired="1"/>
+                    </Frame.GestureRecognizers>
+                    <Frame HasShadow="False" CornerRadius="0" BackgroundColor="White" Padding="12">
+                       <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="REQUEST A LOVE NOTE"
+                                        HorizontalOptions="FillAndExpand"
+                                        FontAttributes="Bold"
+                                        FontSize="17"
+                                        VerticalOptions="Center"
+                                        TextColor="#722BAD"/>
+                                <Image Source="icon_right_arrow" HeightRequest="30" WidthRequest="30"/>
+                            </StackLayout>
+                            <Label Text="Enter the details of fighters, survivors or carergivers who deserve a love note and they will be matched to a greeting. "
+                                   TextColor="Gray"
+                                   FontSize="13"
+                                   />
+                        </StackLayout>
+                    </Frame>
+                </Frame>
+
+                <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="100">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_collection" NumberOfTapsRequired="1"/>
+                    </Frame.GestureRecognizers>
+                    <Frame HasShadow="False" CornerRadius="0" BackgroundColor="White" Padding="12">
+                       <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="COLLECT A LOVE NOTE"
+                                        HorizontalOptions="FillAndExpand"
+                                        FontAttributes="Bold"
+                                        FontSize="17"
+                                        VerticalOptions="Center"
+                                        TextColor="#722BAD"/>
+                                <Image Source="icon_right_arrow" HeightRequest="30" WidthRequest="30"/>
+                            </StackLayout>
+                            <Label Text="Received a love note code? Enter its ID and open your love note"
+                                   TextColor="Gray"
+                                   FontSize="13"
+                                   />
+                        </StackLayout>
+                    </Frame>
+                </Frame>
+
+                <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="100">
+                    <Frame HasShadow="False" CornerRadius="0" BackgroundColor="White" Padding="12">
+                       <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="BROWSE THE LOVE NOTES "
+                                        HorizontalOptions="FillAndExpand"
+                                        FontAttributes="Bold"
+                                        FontSize="17"
+                                        VerticalOptions="Center"
+                                        TextColor="#722BAD"/>
+                                <Image Source="icon_right_arrow" HeightRequest="30" WidthRequest="30"/>
+                            </StackLayout>
+                            <Label Text="Looking for inspiration? View the cards that have been recieved around the world."
+                                   TextColor="Gray"
+                                   FontSize="13"
+                                   />
+                        </StackLayout>
+                    </Frame>
+                </Frame>
+              
+            </StackLayout>         
+        </ScrollView>
+        <StackLayout Orientation="Vertical"
+                     BackgroundColor="White"
+                     Margin="10,0,10,5">
+
+            <Button HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#722BAD"
+                    Text="LOGIN"
+                    Clicked="Login_Button_Clicked"
+                    TextColor="White"
+                    FontSize="15"
+                    CornerRadius="0"
+                    FontAttributes="Bold" />
+
+            <Label Text="New Member?"
+                   TextColor="Gray"
+                   Margin="0,10,0,5"
+                   FontSize="15"
+                   HorizontalOptions="CenterAndExpand"/>
+
+            <Label Text="Register here"
+                   FontSize="15"
+                   TextColor="#722BAD"
+                   Margin="0,5,0,15"
+                   HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="#722BAD" HeightRequest="2" Margin="0,0,0,10"/>
+    </StackLayout>
+        </StackLayout>
+        
+</ContentPage>
+

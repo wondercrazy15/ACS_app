@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     NavigationPage.HasNavigationBar="False"
+    x:Class="ACS_App.Views.CustomizeNoteView">
+    <StackLayout Spacing="0" x:Name="BgStack" BackgroundColor="#722BAD"  Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <StackLayout  BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="bgStackBottom" Spacing="0" BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <!--App Bar Design -->              
+                <StackLayout Orientation="Horizontal" BackgroundColor="#722BAD" HeightRequest="60" HorizontalOptions="FillAndExpand">
+                    <ImageButton Clicked="backArrow" BackgroundColor="Transparent" Source="arrow_left" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                    <Label Text="Customize Note"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent"
+                            TextColor="White"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            VerticalTextAlignment="Center"/>
+                    <Image Source="" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" BackgroundColor="#722BAD" HeightRequest="60" HorizontalOptions="FillAndExpand">
+                     <Label Text="Reset"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent"
+                            TextColor="White"
+                            FontSize="17"
+                            FontAttributes="Bold"
+                            VerticalTextAlignment="Center"/>                                      
+                   <ImageButton HorizontalOptions="CenterAndExpand"  BackgroundColor="Transparent" Source="undo" HeightRequest="18" WidthRequest="18"/>
+                   <ImageButton HorizontalOptions="CenterAndExpand"  BackgroundColor="Transparent" Source="redo" HeightRequest="18" WidthRequest="18"/>                                               
+                    <Label Text="Save"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent"
+                            TextColor="White"
+                            FontSize="17"
+                            FontAttributes="Bold"
+                            VerticalTextAlignment="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+
+                        </Label.GestureRecognizers>
+                    </Label>    
+                </StackLayout>                
+            </StackLayout>
+        </StackLayout>
+        <!--Bottom bar for edit-->
+        <StackLayout Spacing="0" Orientation="Horizontal" BackgroundColor="#F9F9F9" HeightRequest="60" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                   <ImageButton HorizontalOptions="CenterAndExpand"  BackgroundColor="Transparent" Source="format_size" HeightRequest="18" WidthRequest="18"/>
+                   <ImageButton HorizontalOptions="CenterAndExpand"  BackgroundColor="Transparent" Source="brush" HeightRequest="18" WidthRequest="18"/>                    
+                   <ImageButton HorizontalOptions="CenterAndExpand"  BackgroundColor="Transparent" Source="shape_line" HeightRequest="18" WidthRequest="18"/>
+                   <ImageButton HorizontalOptions="CenterAndExpand"  BackgroundColor="Transparent" Source="format_shapes" HeightRequest="18" WidthRequest="18"/>                                                                  
+                </StackLayout>
+    </StackLayout>
+</ContentPage>
+

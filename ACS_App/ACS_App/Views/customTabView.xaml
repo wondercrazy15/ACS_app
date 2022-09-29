@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:ACS_App="clr-namespace:ACS_App.Views"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarSelectedItemColor="#722BAD"
+            android:TabbedPage.BarItemColor="#C9C9C9"
+            BackgroundColor="White"
+            x:Class="ACS_App.Views.customTabView">
+    <!--Pages can be added as references or inline-->
+    <ACS_App:HomePageView IconImageSource="home"/>
+    <ContentPage IconImageSource="shopping_bag"/>
+    <ContentPage IconImageSource="film"/>
+    <ContentPage IconImageSource="users"/>
+    <ContentPage IconImageSource="user"/>
+    <!--<TabbedPage.Children>
+        <ACS_App:HomePageView IconImageSource="fly.png"/>
+        <ContentPage IconImageSource="shopping_bag" HeightRequest="100" WidthRequest="100"/>
+    <ContentPage IconImageSource="film"/>
+    <ContentPage IconImageSource="users"/>
+    <ContentPage IconImageSource="user"/>
+    </TabbedPage.Children>-->
+</TabbedPage>
