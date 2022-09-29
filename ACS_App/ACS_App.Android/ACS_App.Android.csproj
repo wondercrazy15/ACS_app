@@ -66,6 +66,7 @@
     <Compile Include="SpalshActivity.cs" />
     <Compile Include="CustomEntryRendererAndroid.cs" />
     <Compile Include="passwordEntryRenderer.cs" />
+    <Compile Include="CustomRadioRendere.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

@@ -184,6 +184,30 @@
     <ImageAsset Include="Assets.xcassets\google.imageset\google%402x.png" />
     <ImageAsset Include="Assets.xcassets\google.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\google.imageset\google.png" />
+    <ImageAsset Include="Assets.xcassets\shape_line.imageset\shape_line.png" />
+    <ImageAsset Include="Assets.xcassets\shape_line.imageset\shape_line-2.png" />
+    <ImageAsset Include="Assets.xcassets\shape_line.imageset\shape_line-1.png" />
+    <ImageAsset Include="Assets.xcassets\shape_line.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\brush.imageset\brush.png" />
+    <ImageAsset Include="Assets.xcassets\brush.imageset\brush-2.png" />
+    <ImageAsset Include="Assets.xcassets\brush.imageset\brush-1.png" />
+    <ImageAsset Include="Assets.xcassets\brush.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\format_size.imageset\format_size-1.png" />
+    <ImageAsset Include="Assets.xcassets\format_size.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\format_size.imageset\format_size-2.png" />
+    <ImageAsset Include="Assets.xcassets\format_size.imageset\format_size.png" />
+    <ImageAsset Include="Assets.xcassets\format_shapes.imageset\format_shapes.png" />
+    <ImageAsset Include="Assets.xcassets\format_shapes.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\format_shapes.imageset\format_shapes-1.png" />
+    <ImageAsset Include="Assets.xcassets\format_shapes.imageset\format_shapes-2.png" />
+    <ImageAsset Include="Assets.xcassets\undo.imageset\undo-2.png" />
+    <ImageAsset Include="Assets.xcassets\undo.imageset\undo-1.png" />
+    <ImageAsset Include="Assets.xcassets\undo.imageset\undo.png" />
+    <ImageAsset Include="Assets.xcassets\undo.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\redo.imageset\redo-1.png" />
+    <ImageAsset Include="Assets.xcassets\redo.imageset\redo-2.png" />
+    <ImageAsset Include="Assets.xcassets\redo.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\redo.imageset\redo.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

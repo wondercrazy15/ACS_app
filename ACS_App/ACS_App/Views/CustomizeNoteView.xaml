@@ -2,7 +2,7 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-     NavigationPage.HasNavigationBar="False"
+    NavigationPage.HasNavigationBar="False"
     x:Class="ACS_App.Views.CustomizeNoteView">
     <StackLayout Spacing="0" x:Name="BgStack" BackgroundColor="#722BAD"  Orientation="Vertical" HorizontalOptions="FillAndExpand">
         <StackLayout  BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -41,16 +41,21 @@
 
                         </Label.GestureRecognizers>
                     </Label>    
-                </StackLayout>                
-            </StackLayout>
-        </StackLayout>
-        <!--Bottom bar for edit-->
-        <StackLayout Spacing="0" Orientation="Horizontal" BackgroundColor="#F9F9F9" HeightRequest="60" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                </StackLayout>
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+
+                    <!--Middel areas Screen-->
+                </StackLayout>
+                 <!--Bottom bar for edit-->
+                <StackLayout Spacing="0" Orientation="Horizontal" BackgroundColor="#F9F9F9" HeightRequest="60" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                 <!--Padding="0,0,0,10"-->
                    <ImageButton HorizontalOptions="CenterAndExpand"  BackgroundColor="Transparent" Source="format_size" HeightRequest="18" WidthRequest="18"/>
                    <ImageButton HorizontalOptions="CenterAndExpand"  BackgroundColor="Transparent" Source="brush" HeightRequest="18" WidthRequest="18"/>                    
                    <ImageButton HorizontalOptions="CenterAndExpand"  BackgroundColor="Transparent" Source="shape_line" HeightRequest="18" WidthRequest="18"/>
                    <ImageButton HorizontalOptions="CenterAndExpand"  BackgroundColor="Transparent" Source="format_shapes" HeightRequest="18" WidthRequest="18"/>                                                                  
                 </StackLayout>
+            </StackLayout>
+        </StackLayout>
     </StackLayout>
 </ContentPage>
 

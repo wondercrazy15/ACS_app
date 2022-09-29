@@ -18,6 +18,10 @@ namespace ACS_App.Views
         {
             await PopupNavigation.PopAsync(true);
         }
+
+        void RadioButton_CheckedChanged(System.Object sender, Xamarin.Forms.CheckedChangedEventArgs e)
+        {
+            RadioButton button = sender as RadioButton;
+        }
     }
 }
-
