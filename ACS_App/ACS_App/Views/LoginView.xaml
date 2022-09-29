@@ -87,9 +87,11 @@
                         </Frame>
                     </Frame>
                 </StackLayout>
-            <Label Text="Forgot password?"
+            <Button Text="Forgot password?"
                TextColor="#722BAD"
+               BackgroundColor="Transparent"
                FontAttributes="None"
+               Clicked="Forgot_Button_Clicked"
                FontSize="15"
                HorizontalOptions="Center"/>
         </StackLayout>

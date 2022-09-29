@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
-using NavigationPage = Xamarin.Forms.NavigationPage;
 
 namespace ACS_App.Views
 {
-    public partial class VideoNoteView : ContentPage
+    public partial class ForgotPasswordView : ContentPage
     {
-        public VideoNoteView()
+        public ForgotPasswordView()
         {
             InitializeComponent();
         }
@@ -25,10 +25,17 @@ namespace ACS_App.Views
             Navigation.PopModalAsync();
         }
 
-        void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
+        [Obsolete]
+        async void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushModalAsync(new NavigationPage(new SignNoteView()));
+            try
+            {
+                await PopupNavigation.PushAsync(new ForgotPasswordPopup());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
     }
 }
-

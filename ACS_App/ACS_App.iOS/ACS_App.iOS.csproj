@@ -208,6 +208,18 @@
     <ImageAsset Include="Assets.xcassets\redo.imageset\redo-2.png" />
     <ImageAsset Include="Assets.xcassets\redo.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\redo.imageset\redo.png" />
+    <ImageAsset Include="Assets.xcassets\download_for_offline.imageset\download_for_offline-2.png" />
+    <ImageAsset Include="Assets.xcassets\download_for_offline.imageset\download_for_offline-1.png" />
+    <ImageAsset Include="Assets.xcassets\download_for_offline.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\download_for_offline.imageset\download_for_offline.png" />
+    <ImageAsset Include="Assets.xcassets\play_icon.imageset\play_icon.png" />
+    <ImageAsset Include="Assets.xcassets\play_icon.imageset\play_icon-1.png" />
+    <ImageAsset Include="Assets.xcassets\play_icon.imageset\play_icon-2.png" />
+    <ImageAsset Include="Assets.xcassets\play_icon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\imagsampel.imageset\imagsampel.png" />
+    <ImageAsset Include="Assets.xcassets\imagsampel.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\imagsampel.imageset\imagsampel-2.png" />
+    <ImageAsset Include="Assets.xcassets\imagsampel.imageset\imagsampel-1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

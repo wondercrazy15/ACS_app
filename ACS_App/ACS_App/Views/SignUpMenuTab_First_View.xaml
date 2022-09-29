@@ -90,7 +90,6 @@
                 <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="50">
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
-
                     </Frame.GestureRecognizers>
                     <Frame HasShadow="False" CornerRadius="0" BackgroundColor="White" Padding="12">
                         <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
@@ -105,6 +104,9 @@
                     </Frame>
                 </Frame>
                 <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="50" Margin="0,5,0,10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_sendvideolove"/>
+                    </Frame.GestureRecognizers>
                     <Frame HasShadow="False" CornerRadius="0" BackgroundColor="White" Padding="12">
                         <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
                             <Label Text="SEND A VIDEO LOVE NOTE $6.99"

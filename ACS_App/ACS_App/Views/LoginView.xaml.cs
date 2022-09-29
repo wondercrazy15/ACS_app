@@ -22,6 +22,11 @@ namespace ACS_App.Views
         {
             await PopupNavigation.PushAsync(new SigninPopupView());
         }
+
+        void Forgot_Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushModalAsync(new NavigationPage(new ForgotPasswordView()));
+        }
     }
 }
 

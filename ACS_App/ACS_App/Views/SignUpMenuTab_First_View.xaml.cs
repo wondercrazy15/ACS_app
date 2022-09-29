@@ -39,6 +39,11 @@ namespace ACS_App.Views
         {
             Navigation.PushModalAsync(new NavigationPage(new CustomizeNoteView()));
         }
+
+        void TapGestureRecognizer_Tapped_sendvideolove(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushModalAsync(new NavigationPage(new VideoNoteView()));
+        }
     }
 }
 

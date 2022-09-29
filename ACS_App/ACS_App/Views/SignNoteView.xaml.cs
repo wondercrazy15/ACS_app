@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
-using NavigationPage = Xamarin.Forms.NavigationPage;
 
 namespace ACS_App.Views
 {
-    public partial class VideoNoteView : ContentPage
+    public partial class SignNoteView : ContentPage
     {
-        public VideoNoteView()
+        public SignNoteView()
         {
             InitializeComponent();
         }
@@ -23,11 +23,6 @@ namespace ACS_App.Views
         void backArrow(System.Object sender, System.EventArgs e)
         {
             Navigation.PopModalAsync();
-        }
-
-        void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
-        {
-            Navigation.PushModalAsync(new NavigationPage(new SignNoteView()));
         }
     }
 }

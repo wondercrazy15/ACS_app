@@ -2,11 +2,98 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    ios:Page.UseSafeArea="False"
+    ios:Page.PrefersStatusBarHidden="False"
+    NavigationPage.HasNavigationBar="False"
     x:Class="ACS_App.Views.VideoNoteView">
      <StackLayout Spacing="0" x:Name="BgStack" BackgroundColor="#722BAD"  Orientation="Vertical" HorizontalOptions="FillAndExpand">
         <StackLayout  BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout x:Name="bgStackBottom" Spacing="0" BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                 <!--App Bar Design -->
+                <StackLayout Orientation="Horizontal" BackgroundColor="#722BAD" HeightRequest="60" HorizontalOptions="FillAndExpand">
+                    <ImageButton Clicked="backArrow" BackgroundColor="Transparent" Source="arrow_left" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                    <Label Text="Video Love Note"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent"
+                            TextColor="White"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            VerticalTextAlignment="Center"/>
+                    <Image Source="" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                </StackLayout>
 
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="White">
+                    <Frame BackgroundColor="#722BAD" Margin="10" CornerRadius="15" HasShadow="False">
+                        <StackLayout BackgroundColor="Transparent">
+                            <Label Text="03:00"
+                                   TextColor="White"
+                                   FontAttributes="None"
+                                   FontSize="20"/>
+                            <Label Text="Recorded Time"
+                                   TextColor="White"
+                                   FontAttributes="None"
+                                   FontSize="20"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame CornerRadius="15" Margin="10,0,10,0" Padding="0" HasShadow="False">
+                        <Grid ColumnDefinitions="*,*,*" HorizontalOptions="Fill" BackgroundColor="Transparent" HeightRequest="200">
+                            <Image Source="imagsampel" Grid.Column="0" Grid.ColumnSpan="3" Aspect="AspectFill" Margin="0"  BackgroundColor="Transparent"/>
+                            <Image Source="play_icon" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFit" HeightRequest="50" WidthRequest="50" BackgroundColor="Transparent"/>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" Margin="10,0,10,5">
+                    <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="40" Margin="0,5,0,0">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
+
+                        </Frame.GestureRecognizers>
+                        <Frame HasShadow="False" CornerRadius="0" BackgroundColor="#722BAD" Padding="10">
+                            <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
+                                <Label Text="SUBMIT"
+                                    TextColor="White"
+                                    MaxLines="1"
+                                    HorizontalOptions="Center"
+                                    FontSize="17"
+                                    FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" Margin="10,0,10,5">
+                    <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="40" Margin="0,5,0,0">
+                        <Frame HasShadow="False" CornerRadius="0" BackgroundColor="White" Padding="10">
+                            <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
+                                <Label Text="RE-RECORD"
+                                    TextColor="#722BAD"
+                                    MaxLines="1"
+                                    HorizontalOptions="Center"
+                                    FontSize="17"
+                                    FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" Margin="10,0,10,5">
+                    <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="40" Margin="0,5,0,15">
+                        <Frame HasShadow="False" CornerRadius="0" BackgroundColor="White" Padding="10">
+                            <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center">
+                                <ImageButton Clicked="backArrow" BackgroundColor="Transparent" HorizontalOptions="Center" Source="download_for_offline" HeightRequest="35" WidthRequest="35" Margin="5,0,0,0"/>
+                                <Label Text="UPLOAD EXISTING VIDEO"
+                                    TextColor="#722BAD"
+                                    MaxLines="1"
+                                    HorizontalOptions="Center"
+                                    FontSize="17"
+                                    FontAttributes="Bold"/>
+                                <ImageButton BackgroundColor="Transparent" HorizontalOptions="Center" Source="" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </StackLayout>
