@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Android.Content.Res;
+//using Android.Content.Res;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;

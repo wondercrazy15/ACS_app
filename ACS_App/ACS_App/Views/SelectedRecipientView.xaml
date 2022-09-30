@@ -59,7 +59,7 @@
                                                    BackgroundColor="#EFEFEF"
                                                    Margin="0"
                                                    Padding="0"
-                                                   CornerRadius="50"
+                                                   CornerRadius="45"
                                                    HeightRequest="90"
                                                    WidthRequest="90">
                                                 <Image HorizontalOptions="Center"

@@ -69,7 +69,8 @@ namespace ACS_App.Views
         }
         void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushModalAsync(new NavigationPage(new CategorizeDetailDropdownView()));
+            //Navigation.PushModalAsync(new NavigationPage(new CategorizeDetailDropdownView()));
+            Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(new personilizeWithImage()));
         }
     }
 }

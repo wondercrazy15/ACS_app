@@ -24,7 +24,8 @@
                             VerticalTextAlignment="Center"/>
                     <Image Source="" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
                 </StackLayout>
-                <StackLayout Margin="20" Spacing="8" Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="White">
+                <ScrollView Orientation="Vertical">
+                      <StackLayout Margin="20" Spacing="8" Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="White">
                     <Label Text="Message"
                            TextColor="#373737"
                            FontSize="15"
@@ -129,7 +130,10 @@
                             </StackLayout>
                         </Frame>
                     </Frame>
-                </StackLayout>                
+                </StackLayout>    
+
+                </ScrollView>
+                          
             </StackLayout>
         </StackLayout>
     </StackLayout>

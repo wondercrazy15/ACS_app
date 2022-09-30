@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
-using static Android.App.LauncherActivity;
+//using static Android.App.LauncherActivity;
 using NavigationPage = Xamarin.Forms.NavigationPage;
 
 namespace ACS_App.Views

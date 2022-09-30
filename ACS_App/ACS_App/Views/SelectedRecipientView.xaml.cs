@@ -49,6 +49,11 @@ namespace ACS_App.Views
         void RadioButton_CheckedChanged(System.Object sender, Xamarin.Forms.CheckedChangedEventArgs e)
         {
             RadioButton button = sender as RadioButton;
+            if (button.IsChecked == true)
+            {
+                Console.WriteLine(button.IsChecked.ToString());
+                Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(new CategorizeDetailDropdownView()));
+            }
         }
         void Recipient_Age_group_list_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
         {

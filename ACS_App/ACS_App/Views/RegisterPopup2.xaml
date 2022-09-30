@@ -19,7 +19,7 @@
                       EasingOut="SinIn"  
       HasBackgroundAnimation="False"/>  
     </pages:PopupPage.Animation>
-    <StackLayout HeightRequest="600" VerticalOptions="CenterAndExpand" BackgroundColor="red" Margin="20,0,20,0" Padding="0" HorizontalOptions="FillAndExpand" >
+    <StackLayout HeightRequest="600" VerticalOptions="CenterAndExpand" BackgroundColor="White" Margin="20,0,20,0" Padding="0" HorizontalOptions="FillAndExpand" >
         <ScrollView Orientation="Vertical">
             <Frame CornerRadius="0" Margin="0" Padding="0" BorderColor="White" HasShadow="False" BackgroundColor="White" >  
                 <StackLayout Padding="0" Margin="0" BackgroundColor="White">               
