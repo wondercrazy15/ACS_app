@@ -67,6 +67,7 @@
     <Compile Include="CustomEntryRendererAndroid.cs" />
     <Compile Include="passwordEntryRenderer.cs" />
     <Compile Include="CustomRadioRendere.cs" />
+    <Compile Include="CustomEditorRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:local="clr-namespace:ACS_App.Helper"
+    ios:Page.UseSafeArea="False"
+    ios:Page.PrefersStatusBarHidden="False"
+    NavigationPage.HasNavigationBar="False"
+    x:Class="ACS_App.Views.StripePaymentView">
+     <StackLayout Spacing="0" x:Name="BgStack" BackgroundColor="#722BAD"  Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <StackLayout  BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="bgStackBottom" Spacing="0" BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                 <!--App Bar Design -->
+                <StackLayout Orientation="Horizontal" BackgroundColor="#722BAD" HeightRequest="60" HorizontalOptions="FillAndExpand">
+                    <ImageButton Clicked="backArrow" BackgroundColor="Transparent" Source="arrow_left" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                    <Label Text="PAYMENT"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent"
+                            TextColor="White"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            VerticalTextAlignment="Center"/>
+                    <Image Source="" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                </StackLayout>
+                <StackLayout Margin="20" Spacing="18" Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="White">                   
+                </StackLayout>                
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

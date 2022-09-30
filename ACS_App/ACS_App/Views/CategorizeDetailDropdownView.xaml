@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:local="clr-namespace:ACS_App.Helper"
+    ios:Page.UseSafeArea="False"
+    ios:Page.PrefersStatusBarHidden="False"
+    NavigationPage.HasNavigationBar="False"
+    x:Class="ACS_App.Views.CategorizeDetailDropdownView">
+     <StackLayout Spacing="0" x:Name="BgStack" BackgroundColor="#722BAD"  Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <StackLayout  BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="bgStackBottom" Spacing="0" BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                 <!--App Bar Design -->
+                <StackLayout Orientation="Horizontal" BackgroundColor="#722BAD" HeightRequest="60" HorizontalOptions="FillAndExpand">
+                    <ImageButton Clicked="backArrow" BackgroundColor="Transparent" Source="arrow_left" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                    <Label Text="Categorize"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent"
+                            TextColor="White"                            
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            VerticalTextAlignment="Center"/>
+                    <Image Source="" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                </StackLayout>
+                <StackLayout Margin="20" Spacing="8" Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="White">
+
+                    <!--Categorize By Age-->
+                    <StackLayout Spacing="0">
+                            <Frame
+                                HeightRequest="40"
+                                HasShadow="False"
+                                BorderColor="#F4F4F4"
+                                BackgroundColor="#F4F4F4"
+                                Margin="0"
+                                Padding="10,0,10,0"
+                                CornerRadius="02">
+                                <Grid RowSpacing="0" Padding="0" Margin="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="50"/>
+                                    </Grid.ColumnDefinitions>
+                                    <local:PasswordCustomRendererEntry  x:Name="Categorize_by_age_text"
+                                                                        BackgroundColor="#F4F4F4"
+                                                                        Placeholder="-Categorize by Age-"
+                                                                        PlaceholderColor="#868686"
+                                                                        Margin="0"
+                                                                        IsReadOnly="True"
+                                                                        TextColor="Black"
+                                                                        FontSize="Small"/>
+                                    <ImageButton x:Name="Categorize_by_age_image"
+                                                 BackgroundColor="Transparent"
+                                                 Source="arrow_drop_down_circle"
+                                                 Grid.Column="1"
+                                                 HorizontalOptions="End"
+                                                 HeightRequest="40"
+                                                 Clicked="btn_icon_recipientAge_Clicked"
+                                                 WidthRequest="20"/>
+                                </Grid>
+                            </Frame>
+                              
+                            <Frame x:Name="Recipient_Age_group_frameView" BorderColor="#DADADA" Padding="10" HasShadow="False" Margin="0">
+                                <CollectionView x:Name="Recipient_Age_group_list"
+                                                Margin="0"
+                                                VerticalOptions="StartAndExpand"
+                                                SelectionMode="Single"
+                                                SelectionChanged="Recipient_Age_group_list_SelectionChanged">
+                                    <CollectionView.ItemTemplate>    
+                                        <DataTemplate>
+                                            <Label Text="{Binding .}"
+                                                   VerticalOptions="End"
+                                                   FontSize="15"
+                                                   MaxLines="2"
+                                                   TextColor="#5B5B5B" BackgroundColor="White"/>
+                                        </DataTemplate>    
+                                    </CollectionView.ItemTemplate>    
+                                </CollectionView>
+                            </Frame>
+                        </StackLayout>
+
+                    <!--Categorize By Gender-->
+                    <StackLayout Spacing="0">
+                            <Frame
+                                HeightRequest="40"
+                                HasShadow="False"
+                                BorderColor="#F4F4F4"
+                                BackgroundColor="#F4F4F4"
+                                Margin="0"
+                                Padding="10,0,10,0"
+                                CornerRadius="02">
+                                <Grid RowSpacing="0" Padding="0" Margin="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="50"/>
+                                    </Grid.ColumnDefinitions>
+                                    <local:PasswordCustomRendererEntry  x:Name="Categorize_by_Gender_text"
+                                                                        BackgroundColor="#F4F4F4"
+                                                                        Placeholder="-Categorize by Gender-"
+                                                                        PlaceholderColor="#868686"
+                                                                        Margin="0"
+                                                                        IsReadOnly="True"
+                                                                        TextColor="Black"
+                                                                        FontSize="Small"/>
+                                    <ImageButton x:Name="Categorize_by_Gender_image"
+                                                 BackgroundColor="Transparent"
+                                                 Source="arrow_drop_down_circle"
+                                                 Grid.Column="1"
+                                                 HorizontalOptions="End"
+                                                 HeightRequest="40"
+                                                 Clicked="btn_icon_Recipient_Gender_Clicked"
+                                                 WidthRequest="20"/>
+                                </Grid>
+                            </Frame>
+                              
+                            <Frame x:Name="Recipient_Gender_frameView" BorderColor="#DADADA" Padding="10" HasShadow="False" Margin="0">
+                                <CollectionView x:Name="Recipient_Gender_list"
+                                                Margin="0"
+                                                VerticalOptions="StartAndExpand"
+                                                SelectionMode="Single"
+                                                SelectionChanged="Recipient_Gender_group_list_SelectionChanged">
+                                    <CollectionView.ItemTemplate>    
+                                        <DataTemplate>
+                                            <Label Text="{Binding .}"
+                                                   VerticalOptions="End"
+                                                   FontSize="15"
+                                                   MaxLines="2"
+                                                   TextColor="#5B5B5B" BackgroundColor="White"/>
+                                        </DataTemplate>    
+                                    </CollectionView.ItemTemplate>    
+                                </CollectionView>
+                            </Frame>
+                        </StackLayout>
+
+                    <!--Categorize By Relationship to Cancer-->
+                    <StackLayout Spacing="0" >
+                            <Frame
+                                HeightRequest="40"
+                                HasShadow="False"
+                                BorderColor="#F4F4F4"
+                                BackgroundColor="#F4F4F4"
+                                Margin="0"
+                                Padding="10,0,10,0"
+                                CornerRadius="02">
+                                <Grid RowSpacing="0" Padding="0" Margin="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="50"/>
+                                    </Grid.ColumnDefinitions>
+                                    <local:PasswordCustomRendererEntry  x:Name="relationship_to_cancer_text"
+                                                                        BackgroundColor="#F4F4F4"
+                                                                        Placeholder="- Is your Note Specifically for (Relationship to Cancer) -"
+                                                                        PlaceholderColor="#868686"
+                                                                        Margin="0"
+                                                                        IsReadOnly="True"
+                                                                        TextColor="Black"
+                                                                        FontSize="Small"/>
+                                    <ImageButton x:Name="relationship_to_cancer_image"
+                                                 BackgroundColor="Transparent"
+                                                 Source="arrow_drop_down_circle"
+                                                 Grid.Column="1"
+                                                 HorizontalOptions="End"
+                                                 HeightRequest="40"
+                                                 Clicked="btn_icon_form_of_delivery_Clicked"
+                                                 WidthRequest="20"/>
+                                </Grid>
+                            </Frame>
+                              
+                            <Frame x:Name="relationship_to_cancer_frameView" BorderColor="#DADADA" Padding="10" HasShadow="False" Margin="0">
+                                <CollectionView x:Name="relationship_to_cancer_frameView_list"
+                                                Margin="0"
+                                                VerticalOptions="StartAndExpand"
+                                                SelectionMode="Single"
+                                                SelectionChanged="form_of_delivery_group_list_SelectionChanged">
+                                    <CollectionView.ItemTemplate>    
+                                        <DataTemplate>
+                                            <Label Text="{Binding .}"
+                                                    VerticalOptions="End"
+                                                    FontSize="15"
+                                                    MaxLines="2"
+                                                    TextColor="#5B5B5B" BackgroundColor="White"/>
+                                        </DataTemplate>    
+                                    </CollectionView.ItemTemplate>    
+                                </CollectionView>
+                            </Frame>
+                        </StackLayout>                    
+                    <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="40" Margin="0,5,0,5">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                        <Frame HasShadow="False" CornerRadius="0" BackgroundColor="#722BAD" Padding="10">
+                            <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
+                                <Label Text="SAVE &amp; CONTINUE"
+                                    TextColor="White"
+                                    MaxLines="1"
+                                    HorizontalOptions="Center"
+                                    FontSize="17"
+                                    FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+                    </Frame>
+                </StackLayout>                
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
+

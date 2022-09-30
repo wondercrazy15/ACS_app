@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
-using NavigationPage = Xamarin.Forms.NavigationPage;
 
 namespace ACS_App.Views
 {
-    public partial class SignNoteView : ContentPage
+    public partial class StripePaymentView : ContentPage
     {
-        public SignNoteView()
+        public StripePaymentView()
         {
             InitializeComponent();
         }
@@ -24,12 +23,7 @@ namespace ACS_App.Views
         void backArrow(System.Object sender, System.EventArgs e)
         {
             Navigation.PopModalAsync();
-        }
-
-        void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
-        {
-            Navigation.PushModalAsync(new NavigationPage(new SignedNoteCustomizedPremium()));
-        }
+        }        
     }
 }
 

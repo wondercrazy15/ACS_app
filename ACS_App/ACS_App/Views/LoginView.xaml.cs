@@ -27,6 +27,19 @@ namespace ACS_App.Views
         {
             Navigation.PushModalAsync(new NavigationPage(new ForgotPasswordView()));
         }
+
+        [Obsolete]
+        async void TapGestureRecognizer_Tapped_1(System.Object sender, System.EventArgs e)
+        {
+            try
+            {
+                await PopupNavigation.PushAsync(new RegisterPopup1());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
     }
 }
 
