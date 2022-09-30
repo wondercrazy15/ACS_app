@@ -3,13 +3,12 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
-using NavigationPage = Xamarin.Forms.NavigationPage;
 
 namespace ACS_App.Views
 {
-    public partial class SignNoteView : ContentPage
+    public partial class personilizeWithImage : ContentPage
     {
-        public SignNoteView()
+        public personilizeWithImage()
         {
             InitializeComponent();
         }
@@ -27,10 +26,14 @@ namespace ACS_App.Views
         }
         void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushModalAsync(new NavigationPage(new SignedNoteCustomizedPremium()));
-        //void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
-        //{
-        //    Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(new personilizeWithImage()));
+            try
+            {
+                Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(new RecipientInformationView()));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
     }
 }

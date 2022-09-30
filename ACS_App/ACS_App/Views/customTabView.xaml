@@ -12,8 +12,8 @@
     <ACS_App:HomePageView IconImageSource="home"/>
     <ContentPage IconImageSource="shopping_bag"/>
     <ContentPage IconImageSource="film"/>
-    <ContentPage IconImageSource="users"/>
-    <ContentPage IconImageSource="user"/>
+    <ACS_App:SettingsView IconImageSource="users"/>
+    <ACS_App:Profile IconImageSource="user"/>
     <!--<TabbedPage.Children>
         <ACS_App:HomePageView IconImageSource="fly.png"/>
         <ContentPage IconImageSource="shopping_bag" HeightRequest="100" WidthRequest="100"/>

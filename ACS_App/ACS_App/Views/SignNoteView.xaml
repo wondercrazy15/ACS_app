@@ -78,7 +78,7 @@
                                         FontSize="Small"/>
                     <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="40" Margin="0,5,0,50">
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
                         </Frame.GestureRecognizers>
                         <Frame HasShadow="False" CornerRadius="0" BackgroundColor="#722BAD" Padding="10">
                             <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">

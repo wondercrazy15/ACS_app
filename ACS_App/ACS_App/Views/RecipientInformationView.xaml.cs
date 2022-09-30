@@ -3,13 +3,12 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
-using NavigationPage = Xamarin.Forms.NavigationPage;
 
 namespace ACS_App.Views
 {
-    public partial class SignNoteView : ContentPage
+    public partial class RecipientInformationView : ContentPage
     {
-        public SignNoteView()
+        public RecipientInformationView()
         {
             InitializeComponent();
         }
@@ -25,12 +24,14 @@ namespace ACS_App.Views
         {
             Navigation.PopModalAsync();
         }
-        void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
+        void RadioButton_CheckedChanged(System.Object sender, Xamarin.Forms.CheckedChangedEventArgs e)
         {
-            Navigation.PushModalAsync(new NavigationPage(new SignedNoteCustomizedPremium()));
-        //void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
-        //{
-        //    Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(new personilizeWithImage()));
+            RadioButton button = sender as RadioButton;
+            if (button.IsChecked == true)
+            {
+                Console.WriteLine(button.IsChecked.ToString());
+                Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(new SelectedRecipientView()));
+            }
         }
     }
 }

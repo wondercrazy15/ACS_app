@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    ios:Page.UseSafeArea="False"
+    ios:Page.PrefersStatusBarHidden="False"
+    NavigationPage.HasNavigationBar="False"
+    xmlns:local="clr-namespace:ACS_App.Helper"
+    x:Class="ACS_App.Views.SelectedRecipientView">
+    <StackLayout x:Name="BgStack" BackgroundColor="#722BAD"  Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <StackLayout  BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="bgStackBottom" BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <!--App Bar Design -->
+                <StackLayout Orientation="Horizontal" BackgroundColor="#722BAD" HeightRequest="60" HorizontalOptions="FillAndExpand">
+                    <ImageButton Clicked="backArrow" BackgroundColor="Transparent" Source="arrow_left" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                    <Label Text="Select a Recipient"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent"
+                            TextColor="White"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            VerticalTextAlignment="Center"/>
+                    <Image Source="" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+                     <local:CustomEntry BackgroundColor="#F4F4F4"
+                               Placeholder="Search for a recipient (by town or first name)"
+                               HeightRequest="40"
+                               HorizontalOptions="FillAndExpand"
+                               PlaceholderColor="#868686"
+                               TextColor="Black"
+                               Margin="40,10,10,0"
+                               FontSize="18"/>
+                    <CollectionView x:Name="selectedRecipientList"
+                                   SelectionMode="Single"
+                                   BackgroundColor="White"
+                                   SelectedItem="{Binding .}"
+                                   SelectionChanged="Recipient_Age_group_list_SelectionChanged">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="3" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>    
+                            <DataTemplate>
+                                <SwipeView BackgroundColor="White">
+                                <Grid Padding="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*" />
+                                    </Grid.ColumnDefinitions>
+                                        <StackLayout Grid.RowSpan="3" BackgroundColor="White" Spacing="0" HorizontalOptions="CenterAndExpand">
+                                            <Frame HasShadow="False"
+                                                   HorizontalOptions="Start"
+                                                   BorderColor="#722BAD"
+                                                   BackgroundColor="#EFEFEF"
+                                                   Margin="0"
+                                                   Padding="0"
+                                                   CornerRadius="50"
+                                                   HeightRequest="90"
+                                                   WidthRequest="90">
+                                                <Image HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                   Source=""
+                                                   Aspect="AspectFit"
+                                                   HeightRequest="80"
+                                                   WidthRequest="80">
+                                                </Image>
+                                            </Frame>
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="0">
+                                                <local:CustomRadioButton GroupName="recipient" Content="" Value="2" TextColor="#373737" CheckedChanged="RadioButton_CheckedChanged"/>
+                                                <Label Text="{Binding .}"
+                                                       TextColor="#722BAD"
+                                                       FontAttributes="Bold"
+                                                       HorizontalTextAlignment="Center"
+                                                       VerticalOptions="Center"
+                                                       Padding="0"
+                                                       MaxLines="1"
+                                                       FontSize="18"/>
+                                            </StackLayout>
+                                            <Label Text="Boise, Idaho"
+                                                   Padding="0"
+                                                   Margin="0"
+                                                   TextColor="Black"
+                                                   FontAttributes="None"
+                                                   MaxLines="1"
+                                                   HorizontalOptions="Center"
+                                                   FontSize="14"/>
+                                        </StackLayout>
+                                </Grid>
+                                    </SwipeView>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    <!--<StackLayout BackgroundColor="Transparent" Orientation="Vertical" HorizontalOptions="Start" Spacing="0">
+                        <Frame HasShadow="False"
+                               HorizontalOptions="Start"
+                               BorderColor="#722BAD"
+                               Margin="0"
+                               Padding="0"
+                               CornerRadius="35"
+                               HeightRequest="80"
+                               WidthRequest="80">
+                            <Image HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                               Source="splashLOGO"
+                               Aspect="AspectFit"
+                               HeightRequest="80"
+                               WidthRequest="80">
+                            </Image>
+                        </Frame>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="0">
+                            <local:CustomRadioButton GroupName="recipient" Content="" Value="2" TextColor="#373737"/>
+                            <Label Text="Sam"
+                                   TextColor="#722BAD"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalOptions="Center"
+                                   Padding="0"
+                                   MaxLines="1"
+                                   FontSize="18"/>
+                        </StackLayout>
+                        <Label Text="Boise, Idaho"
+                               Padding="0"
+                               Margin="0"
+                               TextColor="Black"
+                               FontAttributes="None"
+                               MaxLines="1"
+                               HorizontalOptions="Center"
+                               FontSize="14"/>
+                    </StackLayout>-->
+
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
+

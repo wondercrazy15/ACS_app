@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    ios:Page.UseSafeArea="False"
+    ios:Page.PrefersStatusBarHidden="False"
+    NavigationPage.HasNavigationBar="False"
+    x:Class="ACS_App.Views.personilizeWithImage">
+     <StackLayout x:Name="BgStack" BackgroundColor="#722BAD"  Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <StackLayout  BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="bgStackBottom" BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <!--App Bar Design -->
+                <StackLayout Orientation="Horizontal" BackgroundColor="#722BAD" HeightRequest="60" HorizontalOptions="FillAndExpand">
+                    <ImageButton Clicked="backArrow" BackgroundColor="Transparent" Source="arrow_left" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                    <Label Text="Personalize with an Image"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent"
+                            TextColor="White"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            VerticalTextAlignment="Center"/>
+                    <Image Source="" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                </StackLayout>
+                <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+                    <StackLayout Orientation="Vertical" Margin="24">
+                         <Frame HasShadow="False" CornerRadius="5" Padding="2" BackgroundColor="#722BAD" HorizontalOptions="Center" WidthRequest="120" HeightRequest="120" Margin="0,75,0,48">
+                            <Frame HasShadow="False" CornerRadius="5" BackgroundColor="#EFEFEF" Padding="0">
+                                <Image Source="splashLOGO" Aspect="AspectFill"></Image>
+                            </Frame>
+                        </Frame>
+                         <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="40" Margin="0,5,0,5">
+                            <Frame HasShadow="False" CornerRadius="0" BackgroundColor="White" Padding="10">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
+                                    <Label Text="UPLOAD +$2.99"
+                                        TextColor="#722BAD"
+                                        MaxLines="1"
+                                        HorizontalOptions="Center"
+                                        FontSize="17"
+                                        FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                        </Frame>
+                        <Frame HasShadow="False" CornerRadius="0" Padding="2" BackgroundColor="#722BAD" HeightRequest="40" Margin="0,18,0,15">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+                            </Frame.GestureRecognizers>
+                            <Frame HasShadow="False" CornerRadius="0" BackgroundColor="#722BAD" Padding="10">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="Fill" BackgroundColor="Transparent" VerticalOptions="Center">
+                                    <Label Text="SAVE &amp; CONTINUE"
+                                        TextColor="White"
+                                        MaxLines="1"
+                                        HorizontalOptions="Center"
+                                        FontSize="17"
+                                        FontAttributes="Bold"/>
+                                </StackLayout>
+                            </Frame>
+                        </Frame>
+                        <Label Text="SKIP"
+                           TextColor="#722BAD"
+                           FontAttributes="None"
+                           FontSize="15"
+                           HorizontalOptions="Center"/>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
+

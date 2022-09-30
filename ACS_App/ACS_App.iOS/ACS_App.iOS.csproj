@@ -220,6 +220,10 @@
     <ImageAsset Include="Assets.xcassets\imagsampel.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\imagsampel.imageset\imagsampel-2.png" />
     <ImageAsset Include="Assets.xcassets\imagsampel.imageset\imagsampel-1.png" />
+    <ImageAsset Include="Assets.xcassets\edit.imageset\edit-2.png" />
+    <ImageAsset Include="Assets.xcassets\edit.imageset\edit-1.png" />
+    <ImageAsset Include="Assets.xcassets\edit.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\edit.imageset\edit.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
