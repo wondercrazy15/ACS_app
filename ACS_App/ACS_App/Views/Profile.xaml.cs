@@ -16,6 +16,10 @@ namespace ACS_App.Views
             mybadges_2_frame.BackgroundColor = Color.White;
             myPageStack.IsVisible = true;
             myBadgesStack.IsVisible = false;
+            //mypage_2_frame.BackgroundColor = Color.White;
+            //mybadges_2_frame.BackgroundColor = Color.FromHex("#722BAD");
+            //myPageStack.IsVisible = false;
+            //myBadgesStack.IsVisible = true;
 
         }
         protected override void OnAppearing()
