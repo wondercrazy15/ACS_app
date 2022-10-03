@@ -25,7 +25,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>x86_64</MtouchArch>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -61,6 +61,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -224,6 +225,46 @@
     <ImageAsset Include="Assets.xcassets\edit.imageset\edit-1.png" />
     <ImageAsset Include="Assets.xcassets\edit.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\edit.imageset\edit.png" />
+    <ImageAsset Include="Assets.xcassets\logout.imageset\logout.png" />
+    <ImageAsset Include="Assets.xcassets\logout.imageset\logout 1.png" />
+    <ImageAsset Include="Assets.xcassets\logout.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\logout.imageset\logout 2.png" />
+    <ImageAsset Include="Assets.xcassets\lock.imageset\lock.png" />
+    <ImageAsset Include="Assets.xcassets\lock.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\lock.imageset\lock 1.png" />
+    <ImageAsset Include="Assets.xcassets\lock.imageset\lock 2.png" />
+    <ImageAsset Include="Assets.xcassets\notifications.imageset\notifications 1.png" />
+    <ImageAsset Include="Assets.xcassets\notifications.imageset\notifications 2.png" />
+    <ImageAsset Include="Assets.xcassets\notifications.imageset\notifications.png" />
+    <ImageAsset Include="Assets.xcassets\notifications.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\calendar_month.imageset\calendar_month.png" />
+    <ImageAsset Include="Assets.xcassets\calendar_month.imageset\calendar_month 1.png" />
+    <ImageAsset Include="Assets.xcassets\calendar_month.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\calendar_month.imageset\calendar_month 2.png" />
+    <ImageAsset Include="Assets.xcassets\share.imageset\share 2.png" />
+    <ImageAsset Include="Assets.xcassets\share.imageset\share 1.png" />
+    <ImageAsset Include="Assets.xcassets\share.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\share.imageset\share.png" />
+    <ImageAsset Include="Assets.xcassets\description.imageset\description 2.png" />
+    <ImageAsset Include="Assets.xcassets\description.imageset\description 1.png" />
+    <ImageAsset Include="Assets.xcassets\description.imageset\description.png" />
+    <ImageAsset Include="Assets.xcassets\description.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\campaign.imageset\campaign.png" />
+    <ImageAsset Include="Assets.xcassets\campaign.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\campaign.imageset\campaign-1.png" />
+    <ImageAsset Include="Assets.xcassets\campaign.imageset\campaign-2.png" />
+    <ImageAsset Include="Assets.xcassets\how_to_vote.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\how_to_vote.imageset\how_to_vote-1.png" />
+    <ImageAsset Include="Assets.xcassets\how_to_vote.imageset\how_to_vote-2.png" />
+    <ImageAsset Include="Assets.xcassets\how_to_vote.imageset\how_to_vote.png" />
+    <ImageAsset Include="Assets.xcassets\forum.imageset\forum.png" />
+    <ImageAsset Include="Assets.xcassets\forum.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\forum.imageset\forum-2.png" />
+    <ImageAsset Include="Assets.xcassets\forum.imageset\forum-1.png" />
+    <ImageAsset Include="Assets.xcassets\question_mark.imageset\question_mark.png" />
+    <ImageAsset Include="Assets.xcassets\question_mark.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\question_mark.imageset\question_mark-1.png" />
+    <ImageAsset Include="Assets.xcassets\question_mark.imageset\question_mark-2.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
