@@ -32,6 +32,7 @@ namespace ACS_App.Views
 
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
+            Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(new SettingsView()));
         }
 
         void TapGestureRecognizer_Tapped_left(System.Object sender, System.EventArgs e)

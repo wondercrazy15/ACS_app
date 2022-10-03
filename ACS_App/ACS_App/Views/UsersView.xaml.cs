@@ -6,9 +6,9 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace ACS_App.Views
 {
-    public partial class SettingsView : ContentPage
+    public partial class UsersView : ContentPage
     {
-        public SettingsView()
+        public UsersView()
         {
             InitializeComponent();
         }
@@ -20,10 +20,10 @@ namespace ACS_App.Views
             BgStack.Padding = new Thickness(0, safeAreaInset.Top, 0, 0);
             bgStackBottom.Padding = new Thickness(0, 0, 0, safeAreaInset.Bottom);
         }
-        void backArrow(System.Object sender, System.EventArgs e)
+
+        void OnTapped(System.Object sender, System.EventArgs e)
         {
-            Navigation.PopModalAsync();
+            Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(new LeaderboardView()));
         }
     }
 }
-

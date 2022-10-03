@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ACS_App.Views.UsersView">
+   <StackLayout x:Name="BgStack" BackgroundColor="#722BAD" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout BackgroundColor="White" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="bgStackBottom" Spacing="0" BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <!--App Bar Design -->
+            <StackLayout Orientation="Horizontal" BackgroundColor="#722BAD" HeightRequest="60" HorizontalOptions="FillAndExpand">
+                <Label Text="Community"
+                       HorizontalOptions="CenterAndExpand"
+                       BackgroundColor="Transparent"
+                       TextColor="White"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       VerticalTextAlignment="Center"/>
+            </StackLayout>
+            <Label Text="CATEGORIES"
+                    HorizontalOptions="Start"
+                    FontSize="20"
+                    Margin="20,10,10,0"
+                    VerticalTextAlignment="Center"/>
+
+            <StackLayout Orientation="Horizontal" Margin="20,10" >
+                    <Frame   HorizontalOptions="Start"
+                                    VerticalOptions="Center"
+                                    HeightRequest="18"
+                                    WidthRequest="20"
+                                    HasShadow="False"
+                                    BackgroundColor="#FFBA07"
+                                    CornerRadius="29">
+                                    <Image Source="campaign" HeightRequest="10" WidthRequest="10"/>
+                    </Frame>
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,0,0">
+                    <Label   Text="Announcements"
+                                   FontSize="20"/>
+                    <Label   Text="Announcements regarding our community"
+                                   FontSize="14"/>
+                </StackLayout>
+                <Frame    Padding="0"
+                                HeightRequest="30"
+                                WidthRequest="70"
+                                CornerRadius="15"
+                                HasShadow="False"
+                                VerticalOptions="Center"
+                                BackgroundColor="#FFBA07">
+                    <Label    Text="10"
+                                    TextColor="White"
+                                    FontSize="15"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="20,10" >
+                <Frame   HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                HeightRequest="18"
+                                WidthRequest="20"
+                                HasShadow="False"
+                                BackgroundColor="#6FC0DA"
+                                CornerRadius="29">
+                                <Image Source="forum" HeightRequest="10" WidthRequest="10"/>
+                 </Frame>
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0">
+                    <Label   Text="General Discussion"
+                                   FontSize="20"
+                                   HorizontalOptions="Start"/>
+                    <Label   Text="A place to talk about whatever you want"
+                                   FontSize="14"/>
+                </StackLayout>
+                <Frame    Padding="0"
+                                HeightRequest="30"
+                                WidthRequest="70"
+                                CornerRadius="15"
+                                HasShadow="False"
+                                VerticalOptions="Center"
+                                BackgroundColor="#6FC0DA">
+                                <Label    Text="17"
+                                                TextColor="White"
+                                                FontSize="15"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center"/>
+                 </Frame>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="20,10" >
+                <Frame   HorizontalOptions="Start"
+                                    HasShadow="False"
+                                    HeightRequest="19"
+                                    WidthRequest="20"
+                                    CornerRadius="30"
+                                    BackgroundColor="#DF7158">
+                                    <Image Source="question_mark" HeightRequest="10" WidthRequest="10"/>
+                </Frame>
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0">
+                    <Label   Text="Comment &amp; Feedback"
+                                   FontSize="20"
+                                   HorizontalOptions="Start"/>
+                    <Label   Text="Got a question? Ask away!"
+                                   FontSize="15"/>
+                </StackLayout>
+                 <Frame   Padding="0"
+                                HeightRequest="30"
+                                WidthRequest="70"
+                                CornerRadius="15"
+                                HasShadow="False"
+                                VerticalOptions="Center"
+                                BackgroundColor="#DF7158">
+                        <Label    Text="17"
+                                       TextColor="White"
+                                       FontSize="15"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                 </Frame>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="20,10" >
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapped"/>
+                </StackLayout.GestureRecognizers>
+                <Frame
+                        HorizontalOptions="Start"
+                        HasShadow="False"
+                        HeightRequest="19"
+                        WidthRequest="20"
+                        CornerRadius="30"
+                        BackgroundColor="#55C059">
+                        <Image Source="how_to_vote" HeightRequest="10" WidthRequest="10"/>
+                </Frame>
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0">
+                    <Label   Text="Competition"
+                                   FontSize="20"
+                                   HorizontalOptions="Start"/>
+                    <Label   Text="Vote for your favorite designs"
+                                   FontSize="15"/>
+                </StackLayout>
+                <Frame    Padding="0"
+                                HeightRequest="30"
+                                WidthRequest="70"
+                                CornerRadius="15"
+                                HasShadow="False"
+                                VerticalOptions="Center"
+                                BackgroundColor="#55C059">
+                                <Label    Text="4"
+                                               TextColor="White"
+                                               FontSize="15"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Center"/>
+                 </Frame>
+            </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
