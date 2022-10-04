@@ -2,12 +2,17 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    ios:Page.UseSafeArea="False"
+    ios:Page.PrefersStatusBarHidden="False"
+    NavigationPage.HasNavigationBar="False"
     x:Class="ACS_App.Views.LeaderboardView">
     <ContentPage.Content>
         <StackLayout x:Name="BgStack" BackgroundColor="#722BAD" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout BackgroundColor="White" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <StackLayout x:Name="bgStackBottom" Spacing="0" BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <!--App Bar Design--> 
+               <!--App Bar Design--> 
                     <StackLayout Orientation="Horizontal" BackgroundColor="#722BAD" HeightRequest="60" HorizontalOptions="FillAndExpand">
                         <ImageButton Clicked="backArrow" BackgroundColor="Transparent" Source="arrow_left" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
                         <Label Text="Settings"
@@ -19,6 +24,73 @@
                                 VerticalTextAlignment="Center"/>
                         <Image Source="" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
                     </StackLayout>
+
+                <StackLayout x:Name="IndividualTappedView" Orientation="Vertical" VerticalOptions="FillAndExpand" Margin="20,20,20,0">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Spacing="0" Margin="0">
+                    <Frame x:Name="Individuals_1_frame" HasShadow="False" HorizontalOptions="FillAndExpand" BorderColor="#722BAD" BackgroundColor="#722BAD" Padding="2" CornerRadius="0" HeightRequest="60">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_left"/>
+                        </Frame.GestureRecognizers>
+                        <Frame x:Name="Individuals_2_frame" HasShadow="False" BackgroundColor="#722BAD" Padding="3,3,0,3" HeightRequest="20">
+                            <Label Text="Top Individuals"
+                                   HeightRequest="100"
+                                   WidthRequest="100"
+                                   BackgroundColor="White"
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="#722BAD"
+                                   FontAttributes="Bold"
+                                   FontSize="18"/>
+                        </Frame>
+                    </Frame>
+                    <Frame x:Name="Teams_1_frame" HasShadow="False" HorizontalOptions="FillAndExpand" BorderColor="#722BAD" BackgroundColor="#722BAD" Padding="2" CornerRadius="0">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_Right"/>
+                        </Frame.GestureRecognizers>
+                        <Frame x:Name="Teams_2_frame" HasShadow="False" BackgroundColor="White" Padding="0,3,3,3">
+                            <Label Text="Top Teams"
+                                   WidthRequest="100"
+                                   BackgroundColor="White"
+                                   VerticalOptions="FillAndExpand"
+                                   HorizontalOptions="FillAndExpand"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="#722BAD"
+                                   FontAttributes="Bold"
+                                   FontSize="18"/>
+                        </Frame>
+                    </Frame>
+                </StackLayout>
+                    <CollectionView x:Name="Name_list" Margin="0">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                    <Grid Padding="10" Margin="10" >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="70" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                            <StackLayout Orientation="Horizontal"  BackgroundColor="Red" Grid.ColumnSpan="3">
+                                                <Label   Text="{Binding Index}"
+                                                               VerticalOptions="Center"
+                                                               HorizontalOptions="StartAndExpand"
+                                                               FontAttributes="Bold"/>
+                                                <Label   Text="{Binding Name}"
+                                                               VerticalOptions="Center"
+                                                               HorizontalOptions="CenterAndExpand"
+                                                               FontAttributes="Bold" />
+                                                <Label    Text="{Binding Points ,  StringFormat=' {0} Points'} "
+                                                                VerticalOptions="Center"
+                                                                HorizontalOptions="EndAndExpand"
+                                                                FontAttributes="Bold" />
+                                            </StackLayout>
+                                    </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
                 </StackLayout>
             </StackLayout>
         </StackLayout>
