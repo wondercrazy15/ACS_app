@@ -13,9 +13,9 @@ namespace ACS_App.Views
             InitializeComponent();
         }
         [Obsolete]
-        async void Button_Clicked(System.Object sender, System.EventArgs e)
+        void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            await PopupNavigation.PopAsync(true);
+            PopupNavigation.PopAsync(true);
         }
         void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
         {
@@ -23,15 +23,21 @@ namespace ACS_App.Views
         }
 
         [Obsolete]
-        async void TapGestureRecognizer_Tapped_1(System.Object sender, System.EventArgs e)
+        void TapGestureRecognizer_Tapped_1(System.Object sender, System.EventArgs e)
         {
-            await PopupNavigation.PopAsync(true);
+            PopupNavigation.PopAsync(true);
         }
 
         [Obsolete]
-        async void TapGestureRecognizer_Tapped_2(System.Object sender, System.EventArgs e)
+        void TapGestureRecognizer_Tapped_2(System.Object sender, System.EventArgs e)
         {
-            await PopupNavigation.PushAsync(new RegisterPopup2());
+            PopupNavigation.PushAsync(new RegisterPopup2());
+        }
+
+        [Obsolete]
+        void TapGestureRecognizer_Tapped_as_register_a_team(System.Object sender, System.EventArgs e)
+        {
+            PopupNavigation.PushAsync(new RegisterPopup3());
         }
     }
 }

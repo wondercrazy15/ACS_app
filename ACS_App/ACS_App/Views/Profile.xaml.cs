@@ -51,6 +51,11 @@ namespace ACS_App.Views
             myPageStack.IsVisible = false;
             myBadgesStack.IsVisible = true;
         }
+
+        void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(new FUNdraiseView()));
+        }
     }
 }
 

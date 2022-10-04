@@ -14,9 +14,9 @@ namespace ACS_App.Views
             InitializeComponent();
         }
         [Obsolete]
-        async void Button_Clicked(System.Object sender, System.EventArgs e)
+        void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            await PopupNavigation.PopAsync(true);
+            PopupNavigation.PopAsync(true);
         }
         void TapGestureRecognizer_Tapped(System.Object sender, System.EventArgs e)
         {
@@ -24,9 +24,9 @@ namespace ACS_App.Views
         }
 
         [Obsolete]
-        async void TapGestureRecognizer_Tapped_1(System.Object sender, System.EventArgs e)
+        void TapGestureRecognizer_Tapped_1(System.Object sender, System.EventArgs e)
         {
-            await PopupNavigation.PopAsync(true);
+            PopupNavigation.PopAsync(true);
         }
 
         void btn_icon_password_Clicked(System.Object sender, System.EventArgs e)

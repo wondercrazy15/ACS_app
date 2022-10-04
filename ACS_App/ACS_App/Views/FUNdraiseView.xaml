@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="False"
+    ios:Page.PrefersStatusBarHidden="False"
+    NavigationPage.HasNavigationBar="False"
+    x:Class="ACS_App.Views.FUNdraiseView">
+     <StackLayout Spacing="0" x:Name="BgStack" BackgroundColor="#722BAD"  Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <StackLayout  BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="bgStackBottom" Spacing="0" BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                 <!--App Bar Design -->
+                <StackLayout Orientation="Horizontal" BackgroundColor="#722BAD" HeightRequest="60" HorizontalOptions="FillAndExpand">
+                    <ImageButton Clicked="backArrow" BackgroundColor="Transparent" Source="arrow_left" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                    <Label Text="FUNdraise"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent"
+                            TextColor="White"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            VerticalTextAlignment="Center"/>
+                    <Image Source="" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
+                </StackLayout>
+                <ScrollView>
+
+                    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="Transparent" Margin="10,20,10,20">
+
+                    <Frame Padding="10" HasShadow="False" BorderColor="#722BAD">
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="Share to Fundraise"
+                                   FontAttributes="Bold"
+                                   TextColor="#722BAD"
+                                   FontSize="19"/>
+                            <Label Text="The more you share, the more money you’ll raise. Get your friends and family to join your fundraising efforts and raise money in the fight against cancer."
+                                   FontAttributes="None"
+                                   TextColor="Black"
+                                   Margin="0,0,0,15"
+                                   FontSize="15"/>
+                             <Frame HasShadow="False"  CornerRadius="0" Padding="0"  BorderColor="#722BAD"  HeightRequest="40"  Margin="5">
+                                <Frame HasShadow="False"  CornerRadius="0" BackgroundColor="#722BAD" BorderColor="#722BAD" Padding="0">
+                                    <Label Text="SHARE TO FUNDRAISE"                                              
+                                           TextColor="White"
+                                           MaxLines="1"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"
+                                           FontSize="17"
+                                           FontAttributes="Bold"/>
+                                </Frame>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+                    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+
+                        <Label Text="ACCEPT A DONATION"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                               HorizontalOptions="CenterAndExpand"
+                               Margin="0,0,0,10"
+                               FontSize="18"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Spacing="30">
+                            <Frame BorderColor="#722BAD" Padding="0" HeightRequest="100" WidthRequest="150" CornerRadius="5" HasShadow="False">
+                                <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                    <Image Source="SplashLOGO" HeightRequest="40" WidthRequest="40" />
+                                    <Label Text="CREDIT CARD" TextColor="Red" />
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BorderColor="#722BAD" Padding="0" HeightRequest="100" WidthRequest="150" CornerRadius="5" HasShadow="False">
+                                <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                    <Image Source="SplashLOGO" HeightRequest="40" WidthRequest="40" />
+                                    <Label Text="CHECK" TextColor="Black" />
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                        <Label Text="REQUEST A DONATION"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                                HorizontalOptions="CenterAndExpand"
+                               Margin="0,0,0,10"
+                               FontSize="18"/>
+                    </StackLayout>
+                </StackLayout>
+                </ScrollView>
+                
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
+

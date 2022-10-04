@@ -44,6 +44,9 @@
                              </Frame>
                         </Frame>
                         <Frame HasShadow="False" CornerRadius="0" Padding="0" BorderColor="#722BAD"  HeightRequest="40"  Margin="0">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped_as_register_a_team"/>
+                            </Frame.GestureRecognizers>
                             <Frame HasShadow="False" CornerRadius="0" BorderColor="#722BAD" Padding="10,0,0,0">
                                     <Label Text="Register a team"                                              
                                             TextColor="#722BAD"
