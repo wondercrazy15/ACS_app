@@ -51,7 +51,7 @@
                             </Frame>
                         </StackLayout>
                     </Frame>
-                    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent" Margin="0,30,0,0" HorizontalOptions="FillAndExpand">
 
                         <Label Text="ACCEPT A DONATION"
                                TextColor="Black"
@@ -62,15 +62,15 @@
                         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Spacing="30">
                             <Frame BorderColor="#722BAD" Padding="0" HeightRequest="100" WidthRequest="150" CornerRadius="5" HasShadow="False">
                                 <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                                    <Image Source="SplashLOGO" HeightRequest="40" WidthRequest="40" />
-                                    <Label Text="CREDIT CARD" TextColor="Red" />
+                                    <Image Source="credit_card" HeightRequest="40" WidthRequest="40" />
+                                    <Label Text="CREDIT CARD" FontAttributes="Bold" TextColor="Black" />
                                 </StackLayout>
                             </Frame>
 
                             <Frame BorderColor="#722BAD" Padding="0" HeightRequest="100" WidthRequest="150" CornerRadius="5" HasShadow="False">
                                 <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                                    <Image Source="SplashLOGO" HeightRequest="40" WidthRequest="40" />
-                                    <Label Text="CHECK" TextColor="Black" />
+                                    <Image Source="e_check_line" HeightRequest="40" WidthRequest="40" />
+                                    <Label Text="CHECK" FontAttributes="Bold" TextColor="Black" />
                                 </StackLayout>
                             </Frame>
                         </StackLayout>
@@ -79,12 +79,19 @@
                                TextColor="Black"
                                FontAttributes="Bold"
                                 HorizontalOptions="CenterAndExpand"
-                               Margin="0,0,0,10"
+                               Margin="0,25,0,10"
                                FontSize="18"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Spacing="15" Margin="0,0,0,10">
+                            <Frame BorderColor="#722BAD" Padding="0" HeightRequest="50" WidthRequest="100" CornerRadius="10" HasShadow="False">
+                            </Frame>
+                            <Frame BorderColor="#722BAD" Padding="0" HeightRequest="50" WidthRequest="100" CornerRadius="10" HasShadow="False">
+                            </Frame>
+                            <Frame BorderColor="#722BAD" Padding="0" HeightRequest="50" WidthRequest="100" CornerRadius="10" HasShadow="False">
+                            </Frame>
+                        </StackLayout>
                     </StackLayout>
                 </StackLayout>
                 </ScrollView>
-                
             </StackLayout>
         </StackLayout>
     </StackLayout>

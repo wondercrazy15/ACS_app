@@ -32,8 +32,8 @@
                     </Frame>                   
                 </StackLayout>
                 <StackLayout Orientation="Vertical" x:Name="FirstlableWidth"  HorizontalOptions="Start" Margin="10,0,0,0" VerticalOptions="Center" BackgroundColor="Transparent">
-                    <Label HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="20"  MaxLines=" 2"  Text="Announcements"/>
-                     <Label HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="14"  MaxLines=" 2"  Text="Announcements regarding our community"/>
+                    <Label TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="20"  MaxLines=" 2"  Text="Announcements"/>
+                     <Label TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="14"  MaxLines=" 2"  Text="Announcements regarding our community"/>
                 </StackLayout>
                  <Frame   Padding="0"
                                 HeightRequest="25"
@@ -61,8 +61,8 @@
                     </Frame>                   
                 </StackLayout>
                 <StackLayout Orientation="Vertical" x:Name="SecondlableWidth"  HorizontalOptions="Start" Margin="10,0,0,0" VerticalOptions="Center" BackgroundColor="Transparent">
-                    <Label HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="20"  MaxLines=" 2"  Text="General Discussion"/>
-                     <Label HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="14"  MaxLines=" 2"  Text="A place to talk about whatever you want"/>
+                    <Label TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="20"  MaxLines=" 2"  Text="General Discussion"/>
+                     <Label TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="14"  MaxLines=" 2"  Text="A place to talk about whatever you want"/>
                 </StackLayout>
                  <Frame   Padding="0"
                                 HeightRequest="25"
@@ -90,8 +90,8 @@
                 </Frame>                   
             </StackLayout>
             <StackLayout Orientation="Vertical" x:Name="ThirdlableWidth"  HorizontalOptions="Start" Margin="10,0,0,0" VerticalOptions="Center" BackgroundColor="Transparent">
-                <Label HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="20"  MaxLines=" 2"  Text="Comment &amp; Feedback"/>
-                    <Label HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="14"  MaxLines=" 2"  Text="Got a question? Ask away!"/>
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="20"  MaxLines=" 2"  Text="Comment &amp; Feedback"/>
+                    <Label TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="14"  MaxLines=" 2"  Text="Got a question? Ask away!"/>
             </StackLayout>
                 <Frame   Padding="0"
                             HeightRequest="25"
@@ -122,17 +122,17 @@
                 </Frame>
             </StackLayout>
             <StackLayout Orientation="Vertical" x:Name="FourlableWidth"  HorizontalOptions="Start" Margin="10,0,0,0" VerticalOptions="Center" BackgroundColor="Transparent">
-                <Label HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="20"  MaxLines=" 2"  Text="Competition"/>
-                    <Label HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="14"  MaxLines=" 2"  Text="Vote for your favorite designs"/>
+                <Label TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="20"  MaxLines=" 2"  Text="Competition"/>
+                    <Label TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" FontSize="14"  MaxLines=" 2"  Text="Vote for your favorite designs"/>
             </StackLayout>
                 <Frame   Padding="0"
-                            HeightRequest="25"
-                            WidthRequest="65"
-                            CornerRadius="13"
-                            HasShadow="False"
-                            HorizontalOptions="End"
-                            VerticalOptions="Center"
-                            BackgroundColor="#55C059">
+                                HeightRequest="25"
+                                WidthRequest="65"
+                                CornerRadius="13"
+                                HasShadow="False"
+                                HorizontalOptions="End"
+                                VerticalOptions="Center"
+                                BackgroundColor="#55C059">
                             <Label    Text="4"
                                             FontSize="15"
                                             TextColor="White"

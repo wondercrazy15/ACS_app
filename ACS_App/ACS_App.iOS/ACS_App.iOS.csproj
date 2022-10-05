@@ -25,7 +25,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>x86_64</MtouchArch>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -265,6 +265,14 @@
     <ImageAsset Include="Assets.xcassets\question_mark.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\question_mark.imageset\question_mark-1.png" />
     <ImageAsset Include="Assets.xcassets\question_mark.imageset\question_mark-2.png" />
+    <ImageAsset Include="Assets.xcassets\credit_card.imageset\credit-card-1.png" />
+    <ImageAsset Include="Assets.xcassets\credit_card.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\credit_card.imageset\credit-card-2.png" />
+    <ImageAsset Include="Assets.xcassets\credit_card.imageset\credit-card.png" />
+    <ImageAsset Include="Assets.xcassets\e_check_line.imageset\e-check-line-2.png" />
+    <ImageAsset Include="Assets.xcassets\e_check_line.imageset\e-check-line-1.png" />
+    <ImageAsset Include="Assets.xcassets\e_check_line.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\e_check_line.imageset\e-check-line.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

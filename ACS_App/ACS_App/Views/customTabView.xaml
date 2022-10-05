@@ -10,7 +10,7 @@
             x:Class="ACS_App.Views.customTabView">
     <!--Pages can be added as references or inline-->
     <ACS_App:HomePageView IconImageSource="home"/>
-    <ContentPage IconImageSource="shopping_bag"/>
+    <ACS_App:ShopSponsorship IconImageSource="shopping_bag"/>
     <ContentPage IconImageSource="film"/>
     <ACS_App:UsersView IconImageSource="users"/>
     <ACS_App:Profile IconImageSource="user"/>
