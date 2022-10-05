@@ -39,6 +39,16 @@ namespace ACS_App.Views
         {
             PopupNavigation.PushAsync(new RegisterPopup3());
         }
+        [Obsolete]
+        void TapGestureRecognizer_Tapped_as_register_a_sponsor(System.Object sender, System.EventArgs e)
+        {
+            PopupNavigation.PushAsync(new RegisterASponsorView());
+        }
+        [Obsolete]
+        void TapGestureRecognizer_Tapped_as_register_a_hope_lodge(System.Object sender, System.EventArgs e)
+        {
+            PopupNavigation.PushAsync(new RegisterAHopeLodgeView());
+        }
     }
 }
 
