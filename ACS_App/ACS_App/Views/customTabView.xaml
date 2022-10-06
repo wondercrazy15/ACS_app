@@ -12,7 +12,7 @@
     <ACS_App:HomePageView IconImageSource="home"/>
     <ACS_App:ShopSponsorship IconImageSource="shopping_bag"/>
     <ContentPage IconImageSource="film"/>
-    <ACS_App:UsersView IconImageSource="users"/>
+    <ACS_App:LeaderboardView IconImageSource="users"/>
     <ACS_App:Profile IconImageSource="user"/>
     <!--<TabbedPage.Children>
         <ACS_App:HomePageView IconImageSource="fly.png"/>

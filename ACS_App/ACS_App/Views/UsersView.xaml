@@ -2,21 +2,28 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="False"
+    ios:Page.PrefersStatusBarHidden="False"
+    NavigationPage.HasNavigationBar="False"
     x:Class="ACS_App.Views.UsersView">
    <StackLayout x:Name="BgStack" BackgroundColor="#722BAD" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <StackLayout BackgroundColor="White" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout x:Name="bgStackBottom" Spacing="0" BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <!--App Bar Design -->
             <StackLayout Orientation="Horizontal" BackgroundColor="#722BAD" HeightRequest="60" HorizontalOptions="FillAndExpand">
+                <ImageButton Clicked="backArrow" BackgroundColor="Transparent" Source="arrow_left" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
                 <Label Text="Community"
-                       HorizontalOptions="CenterAndExpand"
-                       BackgroundColor="Transparent"
-                       TextColor="White"
-                       FontSize="20"
-                       FontAttributes="Bold"
-                       VerticalTextAlignment="Center"/>
+                        HorizontalOptions="CenterAndExpand"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        VerticalTextAlignment="Center"/>
+                <Image Source="" HeightRequest="30" WidthRequest="30" Margin="5,0,0,0"/>
             </StackLayout>
-            <Label Text="CATEGORIES"
+            <!--<Label Text="CATEGORIES"
                     HorizontalOptions="Start"
                     FontSize="20"
                     Margin="20,10,10,0"
@@ -109,9 +116,6 @@
                 </Frame>
         </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="20,10" >
-                <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="CompetitionTab"/>
-                </StackLayout.GestureRecognizers>
             <StackLayout HorizontalOptions="Start" VerticalOptions="Center">
                 <Frame   HeightRequest="18"
                                 WidthRequest="20"
@@ -139,7 +143,7 @@
                                             VerticalOptions="Center"
                                             HorizontalOptions="Center"/>
                 </Frame>
-        </StackLayout>
+        </StackLayout>-->
             </StackLayout>
         </StackLayout>
     </StackLayout>

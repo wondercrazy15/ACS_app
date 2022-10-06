@@ -56,6 +56,11 @@ namespace ACS_App.Views
         {
             Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(new FUNdraiseView()));
         }
+
+        void OnEditTapped(System.Object sender, System.EventArgs e)
+        {
+            //Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(new EditProfile()));
+        }
     }
 }
 

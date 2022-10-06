@@ -107,7 +107,13 @@
                                            FontAttributes="Bold"
                                            FontSize="15"/>
                                 </StackLayout>
-                                <Image Source="edit" HeightRequest="20" WidthRequest="20"/>
+                                <Image Source="edit" HeightRequest="20" WidthRequest="20">
+                                    <Image.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                    Tapped="OnEditTapped"
+                                                    NumberOfTapsRequired="1" />
+                                      </Image.GestureRecognizers>
+                                </Image>
                             </StackLayout>
                         </Frame>
                         <Label Text="ACTIVITIES"

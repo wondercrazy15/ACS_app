@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using Android.Content.Res;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
@@ -8,25 +9,25 @@ namespace ACS_App.Views
 {
     public partial class LeaderboardView : ContentPage
     {
-        //List<string> TeamList = new List<string>();
         public LeaderboardView()
         {
             InitializeComponent();
-            //string listItem1 = "Gilbert Oppong";
-            //string listItem2 = "Joseph Edusei";
-            //string listItem3 = "Frank Odoom";
-            //string listItem4 = "Kyereh Bismark";
 
-            //TeamList.Add(listItem1);
-            //TeamList.Add(listItem2);
-            //TeamList.Add(listItem3);
-            //TeamList.Add(listItem4);
-            //TeamList.Add(listItem4);
-            //TeamList.Add(listItem4);
-            //TeamList.Add(listItem4);
-            //TeamList.Add(listItem4);
+            Teams_2_frame.BackgroundColor = Color.FromHex("#722BAD");
+            Individuals_2_frame.BackgroundColor = Color.White;
+            TeamsData.IsVisible = true;
+            IndividualsData.IsVisible = false;
 
-            //Name_list.ItemsSource = TeamList;
+            List<ListClass> listItems = new List<ListClass>();
+            listItems.Add(new ListClass { Index = 1, Name = "Kyereh Bismark", Points = "23,456", Colour = "#FFC107" });
+            listItems.Add(new ListClass { Index = 2, Name = "Joseph Edusei", Points = "83,100", Colour = "#6FC0DA" });
+            listItems.Add(new ListClass { Index = 3, Name = "Frank Odoom", Points = "6,125", Colour = "#DF7158" });
+            listItems.Add(new ListClass { Index = 4, Name = "Gilbert Oppong", Points = "41,200", Colour = "#FFFFFF" });
+            listItems.Add(new ListClass { Index = 5, Name = "Kyereh Bismark", Points = "72,000", Colour = "#FFFFFF" });
+            listItems.Add(new ListClass { Index = 6, Name = "Kyereh Bismark", Points = "85,657", Colour = "#FFFFFF" });
+            listItems.Add(new ListClass { Index = 7, Name = "Kyereh Bismark", Points = "36,487", Colour = "#FFFFFF" });
+            listItems.Add(new ListClass { Index = 8, Name = "Kyereh Bismark", Points = "12,879", Colour = "#FFFFFF" });
+            Name_list.ItemsSource = listItems;
         }
         protected override void OnAppearing()
         {
@@ -34,44 +35,39 @@ namespace ACS_App.Views
 
             var safeAreaInset = On<Xamarin.Forms.PlatformConfiguration.iOS>().SafeAreaInsets();
             BgStack.Padding = new Thickness(0, safeAreaInset.Top, 0, 0);
-
-            List<ListClass> listItems = new List<ListClass>();
-            listItems.Add(new ListClass { Index = 1 , Name = "Gilbert Oppong", Points = 123456});
-            listItems.Add(new ListClass { Index = 2, Name = "Joseph Edusei", Points = 85178 });
-            listItems.Add(new ListClass { Index = 3, Name = "Frank Odoom", Points = 25987 });
-            listItems.Add(new ListClass { Index = 4, Name = "Kyereh Bismark", Points = 41200 });
-            listItems.Add(new ListClass { Index = 5, Name = "Kyereh Bismark", Points = 72000 });
-            listItems.Add(new ListClass { Index = 6, Name = "Kyereh Bismark", Points = 85657 });
-            listItems.Add(new ListClass { Index = 7, Name = "Kyereh Bismark", Points = 36487 });
-            listItems.Add(new ListClass { Index = 8, Name = "Kyereh Bismark", Points = 12879 });
-            Name_list.ItemsSource = listItems;
         }
 
-        void backArrow(System.Object sender, System.EventArgs e)
-        {
-            Navigation.PopModalAsync();
-        }
+        //void backArrow(System.Object sender, System.EventArgs e)
+        //{
+        //    Navigation.PopModalAsync();
+        //}
 
         void TapGestureRecognizer_Tapped_left(System.Object sender, System.EventArgs e)
         {
             Individuals_2_frame.BackgroundColor = Color.FromHex("#722BAD");
             Teams_2_frame.BackgroundColor = Color.White;
-            //myPageStack.IsVisible = true;
-            //myBadgesStack.IsVisible = false;
+            IndividualsData.IsVisible = true;
+            TeamsData.IsVisible = false;
         }
 
         void TapGestureRecognizer_Tapped_Right(System.Object sender, System.EventArgs e)
         {
             Individuals_2_frame.BackgroundColor = Color.White;
             Teams_2_frame.BackgroundColor = Color.FromHex("#722BAD");
-            //myPageStack.IsVisible = false;
-            //myBadgesStack.IsVisible = true;
+            IndividualsData.IsVisible = false;
+            TeamsData.IsVisible = true;
+        }
+
+        void OnTapToCommunity(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(new UsersView()));
         }
     }
     public class ListClass
     {
         public int Index { get; set; }
         public string Name { get; set; }
-        public int Points { get; set; }
+        public string Points { get; set; }
+        public string Colour { get; set; }
     }
 }
