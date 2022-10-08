@@ -59,8 +59,7 @@ namespace ACS_App.Views
 
         void OnEditTapped(System.Object sender, System.EventArgs e)
         {
-            //Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(new EditProfile()));
+            Navigation.PushModalAsync(new Xamarin.Forms.NavigationPage(new EditProfile()));
         }
     }
 }
-
